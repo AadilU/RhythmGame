@@ -35,10 +35,6 @@ public class MainMenu extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private JLabel background;
-	private ImageIcon image;
-	
-	
 	/**
 	 * Launch the application.
 	 */
@@ -76,7 +72,7 @@ public class MainMenu extends JFrame {
 		setBounds(0, 0, 1270, 720);
 		getContentPane().setLayout(null);
 		
-		Panel panel = new Panel();
+		JPanel panel = new JPanel();
 		panel.setBounds(0, 0, 1323, 702);
 		getContentPane().add(panel);
 		panel.setLayout(null);
@@ -126,7 +122,7 @@ public class MainMenu extends JFrame {
 			}
 			public void mouseExited(MouseEvent e) 
 			{
-				java.awt.Image image1 = new ImageIcon("images/logo.png").getImage();
+				java.awt.Image image1 = new ImageIcon("images/logo.png").getImage(); //logo at https://commons.wikimedia.org/wiki/File:Osu!Logo_(2015).png
 				btnStart.setIcon(new ImageIcon(image1));
 			}
 		});
@@ -134,7 +130,7 @@ public class MainMenu extends JFrame {
 		
 		//background image
 		JLabel menuBg = new JLabel("");
-		java.awt.Image image = new ImageIcon("images/bg1.jpg").getImage();
+		java.awt.Image image = new ImageIcon("images/bg1.jpg").getImage(); //wallpaper at https://www.dropbox.com/sh/t0lw1xhmhqdrbmg/AAD-3ryQA2KhWcNga6JLCP4xa?dl=0
 		menuBg.setIcon(new ImageIcon(image));
 		menuBg.setBounds(0, 0, 1294, 681);
 		panel.add(menuBg);
