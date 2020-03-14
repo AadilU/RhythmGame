@@ -73,11 +73,11 @@ public class MainMenu extends JFrame {
 		}
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(0, 0, 1280, 720);
+		setBounds(0, 0, 1270, 720);
 		getContentPane().setLayout(null);
 		
 		Panel panel = new Panel();
-		panel.setBounds(0, 0, 1254, 729);
+		panel.setBounds(0, 0, 1323, 702);
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -94,7 +94,7 @@ public class MainMenu extends JFrame {
 		btnStart.setOpaque(false);
 		btnStart.setBorderPainted(false);
 		btnStart.setContentAreaFilled(false);
-		btnStart.setBounds(327, 60, 580, 580);
+		btnStart.setBounds(395, 110, 480, 480);
 		panel.add(btnStart);
 		
 		btnStart.addActionListener(new ActionListener() {
@@ -121,24 +121,22 @@ public class MainMenu extends JFrame {
 			@Override
 			public void mouseEntered(MouseEvent e) 
 			{
-				java.awt.Image image1 = new ImageIcon("images/logo1.png").getImage();
+				java.awt.Image image1 = new ImageIcon("images/logo.png").getImage();
 				btnStart.setIcon(new ImageIcon(image1));
 			}
 			public void mouseExited(MouseEvent e) 
 			{
-				java.awt.Image image1 = new ImageIcon("images/logo1.png").getImage();
+				java.awt.Image image1 = new ImageIcon("images/logo.png").getImage();
 				btnStart.setIcon(new ImageIcon(image1));
 			}
 		});
 		btnStart.setBorder(null);
-		java.awt.Image image1 = new ImageIcon("images/logo1.png").getImage();
-		btnStart.setIcon(new ImageIcon(image1));
 		
-		//backround image
+		//background image
 		JLabel menuBg = new JLabel("");
-		java.awt.Image image = new ImageIcon("images/bg.png").getImage();
+		java.awt.Image image = new ImageIcon("images/bg1.jpg").getImage();
 		menuBg.setIcon(new ImageIcon(image));
-		menuBg.setBounds(0, 0, 1254, 684);
+		menuBg.setBounds(0, 0, 1294, 681);
 		panel.add(menuBg);
 		
 	
