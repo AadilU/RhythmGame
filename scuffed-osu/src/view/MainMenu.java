@@ -114,7 +114,8 @@ public class MainMenu extends JFrame {
 			}
 		});
 		
-		//experimental
+		//experimental (change image to display alternate when mouse hovers over bounded area, otherwise displays original image)
+		//doesn't do anything rn, both images r the same
 		btnStart.addMouseListener(new MouseAdapter() 
 		{
 			@Override
