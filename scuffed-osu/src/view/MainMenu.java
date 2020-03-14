@@ -2,6 +2,7 @@ package view;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.EventQueue;
+import java.awt.Panel;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -17,7 +18,7 @@ import javax.swing.JButton;
 import java.awt.BorderLayout;
 import javax.swing.SwingConstants;
 
-public class Main extends JFrame {
+public class MainMenu extends JFrame {
 	
 	/**
 	 * 
@@ -31,7 +32,7 @@ public class Main extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Main frame = new Main();
+					MainMenu frame = new MainMenu();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,13 +44,13 @@ public class Main extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Main() {
+	public MainMenu() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 800);
+		setBounds(0, 0, 1280, 720);
 		getContentPane().setLayout(null);
 		
-		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 424, 729);
+		Panel panel = new Panel();
+		panel.setBounds(0, 0, 1254, 729);
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
