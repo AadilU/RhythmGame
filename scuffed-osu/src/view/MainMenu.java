@@ -1,5 +1,6 @@
 package view;
 import java.awt.Color;
+
 import java.awt.Container;
 import java.awt.EventQueue;
 import java.awt.Panel;
@@ -13,6 +14,8 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.File;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
@@ -31,6 +34,10 @@ public class MainMenu extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	private JLabel background;
+	private ImageIcon image;
+	
 	
 	/**
 	 * Launch the application.
@@ -54,7 +61,8 @@ public class MainMenu extends JFrame {
 	 * 
 	 */
 	public MainMenu() {
-		String songName = "audio//carnation.mp3";
+		
+		String songName = "audio/carnation.mp3";
 		String pathToMp3 = System.getProperty("user.dir") +"/"+ songName;
 		BasicPlayer player = new BasicPlayer();
 		try {
@@ -74,6 +82,7 @@ public class MainMenu extends JFrame {
 		panel.setLayout(null);
 		
 
+
 		/*
 		 *creates start button
 		 *stops music of main menu when pressed
@@ -81,8 +90,13 @@ public class MainMenu extends JFrame {
 		 * 
 		 */
 		
-		JButton btnStart = new JButton(" osu!"); 
-		btnStart.setFont(new Font("SansSerif", Font.BOLD, 99));
+		JButton btnStart = new JButton("");
+		btnStart.setOpaque(false);
+		btnStart.setBorderPainted(false);
+		btnStart.setContentAreaFilled(false);
+		btnStart.setBounds(327, 60, 580, 580);
+		panel.add(btnStart);
+		
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -99,8 +113,35 @@ public class MainMenu extends JFrame {
 				dispose();
 			}
 		});
-		btnStart.setBounds(333, 186, 600, 400);
-		panel.add(btnStart);
+		
+		//experimental
+		btnStart.addMouseListener(new MouseAdapter() 
+		{
+			@Override
+			public void mouseEntered(MouseEvent e) 
+			{
+				java.awt.Image image1 = new ImageIcon("images/logo1.png").getImage();
+				btnStart.setIcon(new ImageIcon(image1));
+			}
+			public void mouseExited(MouseEvent e) 
+			{
+				java.awt.Image image1 = new ImageIcon("images/logo1.png").getImage();
+				btnStart.setIcon(new ImageIcon(image1));
+			}
+		});
+		btnStart.setBorder(null);
+		java.awt.Image image1 = new ImageIcon("images/logo1.png").getImage();
+		btnStart.setIcon(new ImageIcon(image1));
+		
+		//backround image
+		JLabel menuBg = new JLabel("");
+		java.awt.Image image = new ImageIcon("images/bg.png").getImage();
+		menuBg.setIcon(new ImageIcon(image));
+		menuBg.setBounds(0, 0, 1254, 684);
+		panel.add(menuBg);
+		
+	
+
 	}
 }
 

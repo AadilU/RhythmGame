@@ -8,6 +8,9 @@ import javax.swing.JPanel;
 import javax.swing.JScrollBar;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JTextPane;
+import javax.swing.JLabel;
+import java.awt.Font;
 
 public class Song_selectUI extends JFrame{
 	/**
@@ -25,5 +28,10 @@ public class Song_selectUI extends JFrame{
 		panel.setBounds(0, 0, 1254, 729);
 		getContentPane().add(panel);
 		panel.setLayout(null);
+		
+		JLabel lblSongSelectrionScreen = new JLabel("song selection screen WIP lol :3 - cory");
+		lblSongSelectrionScreen.setFont(new Font("Tahoma", Font.PLAIN, 36));
+		lblSongSelectrionScreen.setBounds(21, 40, 633, 205);
+		panel.add(lblSongSelectrionScreen);
 	}
 }
