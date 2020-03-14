@@ -17,7 +17,7 @@ public class Song_selectUI extends Main{
 		getContentPane().setBackground(Color.WHITE);
 		getContentPane().setLayout(null);
 		
-		JPanel panel = new JPanel();
+		Panel panel = new Panel();
 		panel.setBounds(0, 0, 424, 729);
 		getContentPane().add(panel);
 		panel.setLayout(null);
