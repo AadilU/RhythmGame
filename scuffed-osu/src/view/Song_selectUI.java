@@ -17,11 +17,12 @@ public class Song_selectUI extends JFrame{
 
 	public Song_selectUI() {
 		//setBounds(500, 0, 405, 720); bounds of beatmap
+		setBounds(0, 0, 1280, 720); 
 		getContentPane().setBackground(Color.WHITE);
 		getContentPane().setLayout(null);
 		
 		Panel panel = new Panel();
-		panel.setBounds(0, 0, 424, 729);
+		panel.setBounds(0, 0, 1254, 729);
 		getContentPane().add(panel);
 		panel.setLayout(null);
 	}

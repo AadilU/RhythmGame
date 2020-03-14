@@ -24,6 +24,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import javazoom.jlgui.basicplayer.BasicPlayerException;
+import java.awt.Font;
 public class MainMenu extends JFrame {
 	
 	/**
@@ -80,7 +81,8 @@ public class MainMenu extends JFrame {
 		 * 
 		 */
 		
-		JButton btnStart = new JButton("start"); 
+		JButton btnStart = new JButton(" osu!"); 
+		btnStart.setFont(new Font("SansSerif", Font.BOLD, 99));
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -90,13 +92,14 @@ public class MainMenu extends JFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
+				
 				Song_selectUI frame = new Song_selectUI(); 
 				frame.setVisible(true); 
 				
 				dispose();
 			}
 		});
-		btnStart.setBounds(112, 350, 200, 50);
+		btnStart.setBounds(333, 186, 600, 400);
 		panel.add(btnStart);
 	}
 }
