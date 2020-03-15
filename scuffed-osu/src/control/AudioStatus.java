@@ -14,7 +14,7 @@ public class AudioStatus {
 
 		//arraylist of audio files
 		ArrayList<String> songs = new ArrayList<String>();
-		songs.add("no song"); 
+		songs.add("no song"); 					
 		songs.add("audio/carnation.mp3");
 		songs.add("audio/armageddon.mp3");
 		songs.add("audio/dualfractal.mp3");

@@ -15,6 +15,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import control.AudioStatus;
+import control.BtnDefault;
+import control.MouseStatus;
 
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -60,8 +62,9 @@ public class MainMenu extends JFrame {
 	 * 
 	 */
 	public MainMenu() {
-		BasicPlayer player = new BasicPlayer();
+		
 		//setting up song and audio sound effect to play during menu
+		BasicPlayer player = new BasicPlayer();
 		AudioStatus.songSet(player, 1);
 		
 		//creating frame
@@ -82,22 +85,13 @@ public class MainMenu extends JFrame {
 		 */
 		JButton btnStart = new JButton("");
 		java.awt.Image image = new ImageIcon("images/logo.png").getImage(); //logo at https://commons.wikimedia.org/wiki/File:Osu!Logo_(2015).png
-		btnStart.setIcon(new ImageIcon(image));
-		btnStart.setOpaque(false);
-		btnStart.setBorderPainted(false);
-		btnStart.setContentAreaFilled(false);
+		BtnDefault.appear(btnStart, image);
 		btnStart.setBounds(395, 110, 480, 480);
 		panel.add(btnStart);
 		
 		btnStart.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			
-				AudioStatus.songStop(player);
-				AudioStatus.songSet(player, 5);
-				
-				SongSelectUI frame = new SongSelectUI(); 
-				frame.setVisible(true); 
-				
+			public void actionPerformed(ActionEvent e) {	
+				MouseStatus.action(player, 0);
 				dispose();
 			}
 		});
@@ -109,8 +103,6 @@ public class MainMenu extends JFrame {
 		menuBg.setBounds(0, 0, 1294, 681);
 		panel.add(menuBg);
 		
-	
-
 	}
 }
 

@@ -17,13 +17,18 @@ import view.SongSelectUI;
 
 public class MouseStatus {
 	
-	public static void action(BasicPlayer player) {
+	public static void action(BasicPlayer player, int i) {
 		AudioStatus.songStop(player);
 		AudioStatus.songSet(player, 5);
-				
-		BeatmapUI frame = new BeatmapUI(); 
-		frame.setVisible(true); 
 		
+			if(i == 0) {
+				SongSelectUI frame = new SongSelectUI(); 
+				frame.setVisible(true); 
+			}
+			if(i == 1) {
+				BeatmapUI frame = new BeatmapUI(); 
+				frame.setVisible(true); 
+				}
 		}
 	
 	public static void state(JButton btnSong, Image image0, Image image1, BasicPlayer player, int i) {	

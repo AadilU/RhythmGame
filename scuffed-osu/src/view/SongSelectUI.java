@@ -18,12 +18,15 @@ import javax.swing.JButton;
 import javax.swing.JTextPane;
 
 import control.AudioStatus;
+import control.BtnDefault;
 import control.MouseStatus;
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import javazoom.jlgui.basicplayer.BasicPlayerException;
 
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
+
 import javax.swing.JTextArea;
 import java.awt.List;
 
@@ -126,16 +129,13 @@ public class SongSelectUI extends JFrame{
 		
 		//button song 1
 		JButton btnSong1 = new JButton("");
-		btnSong1.setIcon(new ImageIcon(image0));
-		btnSong1.setOpaque(false);
-		btnSong1.setBorderPainted(false);
-		btnSong1.setContentAreaFilled(false);
+		BtnDefault.appear(btnSong1, image0);
 		btnSong1.setBounds(610, 100, 667, 96);
 		panel.add(btnSong1);
 		
 		btnSong1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MouseStatus.action(player);
+				MouseStatus.action(player, 1);
 				dispose();
 			}
 		});
@@ -151,16 +151,13 @@ public class SongSelectUI extends JFrame{
 		
 		//button song 2
 		JButton btnSong2 = new JButton("");
-		btnSong2.setIcon(new ImageIcon(image0));
-		btnSong2.setOpaque(false);
-		btnSong2.setBorderPainted(false);
-		btnSong2.setContentAreaFilled(false);
+		BtnDefault.appear(btnSong2, image0);
 		btnSong2.setBounds(610, 200, 667, 96);
 		panel.add(btnSong2);
 	
 		btnSong2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MouseStatus.action(player);
+				MouseStatus.action(player, 1);
 				dispose();
 			}
 		});	
@@ -176,16 +173,13 @@ public class SongSelectUI extends JFrame{
 		
 		//button song  3
 		JButton btnSong3 = new JButton("");
-		btnSong3.setIcon(new ImageIcon(image0));
-		btnSong3.setOpaque(false);
-		btnSong3.setBorderPainted(false);
-		btnSong3.setContentAreaFilled(false);
+		BtnDefault.appear(btnSong3, image0);
 		btnSong3.setBounds(610, 300, 667, 96);
 		panel.add(btnSong3);
 		
 		btnSong3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MouseStatus.action(player);
+				MouseStatus.action(player, 1);
 				dispose();
 			}
 		});
@@ -197,11 +191,6 @@ public class SongSelectUI extends JFrame{
 		menuBg.setIcon(new ImageIcon(imageBg));
 		menuBg.setBounds(0, 0, 1294, 681);
 		panel.add(menuBg);
-
-		
-
-		
-		
-
 	}
+	
 }
