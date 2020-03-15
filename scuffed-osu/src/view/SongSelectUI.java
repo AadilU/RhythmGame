@@ -174,6 +174,8 @@ public class SongSelectUI extends JFrame{
 		});
 		MouseStatus.state(panel, menuBg, btnSong3, image0, image1, 3, player, 4);	
 		
+	
+		setSSBg(panel, menuBg, "images/bg1.jpg");
 	}
 	
 	public static void setSSBg(JPanel panel, JLabel menuBg, String image_bg) {
