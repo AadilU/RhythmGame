@@ -60,9 +60,9 @@ public class MainMenu extends JFrame {
 	 * 
 	 */
 	public MainMenu() {
-		
+		BasicPlayer player = new BasicPlayer();
 		//setting up song and audio sound effect to play during menu
-		AudioStatus.SongSet(1, true);
+		AudioStatus.SongSet(player, 1);
 		
 		//creating frame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -73,6 +73,7 @@ public class MainMenu extends JFrame {
 		panel.setBounds(0, 0, 1323, 702);
 		getContentPane().add(panel);
 		panel.setLayout(null);
+		
 		
 
 
@@ -93,8 +94,9 @@ public class MainMenu extends JFrame {
 		
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				AudioStatus.SongSet(0, false);
-				AudioStatus.SongSet(5, true);
+			
+				AudioStatus.SongStop(player);
+				AudioStatus.SongSet(player, 5);
 				
 				Song_selectUI frame = new Song_selectUI(); 
 				frame.setVisible(true); 
