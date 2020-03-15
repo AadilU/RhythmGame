@@ -119,7 +119,7 @@ public class SongSelectUI extends JFrame{
 		//button song 1
 		JButton btnSong1 = new JButton("");
 		BtnDefault.appear(btnSong1, image0);
-		btnSong1.setBounds(610, 100, 667, 96);
+		btnSong1.setBounds(610, 100, 667, 101);
 		panel.add(btnSong1);
 		
 		btnSong1.addActionListener(new ActionListener() {
@@ -141,7 +141,7 @@ public class SongSelectUI extends JFrame{
 		//button song 2
 		JButton btnSong2 = new JButton("");
 		BtnDefault.appear(btnSong2, image0);
-		btnSong2.setBounds(610, 200, 667, 96);
+		btnSong2.setBounds(610, 200, 667, 101);
 		panel.add(btnSong2);
 	
 		btnSong2.addActionListener(new ActionListener() {
