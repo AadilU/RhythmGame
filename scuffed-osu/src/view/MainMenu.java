@@ -1,38 +1,17 @@
 package view;
-import java.awt.Color;
-
-import java.awt.Container;
 import java.awt.EventQueue;
-import java.awt.Panel;
-
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
 import control.AudioStatus;
 import control.BtnDefault;
 import control.MouseStatus;
 
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.io.File;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
-import java.awt.BorderLayout;
-import javax.swing.SwingConstants;
-
-
-import java.net.MalformedURLException;
-import java.net.URL;
 import javazoom.jlgui.basicplayer.BasicPlayer;
-import javazoom.jlgui.basicplayer.BasicPlayerException;
-import java.awt.Font;
 public class MainMenu extends JFrame {
 	
 	/**

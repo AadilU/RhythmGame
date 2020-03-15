@@ -1,18 +1,13 @@
 package control;
 
 import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.Window;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import view.BeatmapUI;
-import view.MainMenu;
 import view.SongSelectUI;
 
 public class MouseStatus {
