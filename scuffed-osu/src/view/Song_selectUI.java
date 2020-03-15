@@ -44,10 +44,8 @@ public class Song_selectUI extends JFrame{
 		panel.setLayout(null);
 		
 		//creating interface 
-		JLabel menuBg1 = new JLabel("");
-		java.awt.Image image_bgbot = new ImageIcon("images/ssi_bot.png").getImage(); //osu skin: Cookiezi 29 2018-03-18
 		
-		
+		//scoreboard
 		JLabel lblLocalScores = new JLabel("LOCAL SCORES");
 		lblLocalScores.setForeground(Color.WHITE);
 		lblLocalScores.setBackground(Color.BLACK);
@@ -56,29 +54,34 @@ public class Song_selectUI extends JFrame{
 		lblLocalScores.setBounds(38, 102, 278, 50);
 		panel.add(lblLocalScores);
 		
-		JLabel lblafterInformationStored = new JLabel("(after information stored in database, create label, get and display score to label)");
-		lblafterInformationStored.setForeground(Color.WHITE);
-		lblafterInformationStored.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblafterInformationStored.setBounds(38, 159, 530, 36);
-		panel.add(lblafterInformationStored);
+		JLabel lblscore1 = new JLabel("(after information stored in database, create label, get and display score to label)");
+		lblscore1.setForeground(Color.WHITE);
+		lblscore1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblscore1.setBounds(38, 159, 530, 36);
+		panel.add(lblscore1);
+		
+		//interface bottom panel
+		JLabel menuBg1 = new JLabel("");
+		java.awt.Image image_bgbot = new ImageIcon("images/ssi_bot.png").getImage(); //osu skin: Cookiezi 29 2018-03-18
 		menuBg1.setIcon(new ImageIcon(image_bgbot));
 		menuBg1.setBounds(0, 0, 1294, 770);
 		panel.add(menuBg1);
 		
+		//interface top panel
 		JLabel menuBg2 = new JLabel("");
 		java.awt.Image image_bgtop = new ImageIcon("images/ssi_top1.png").getImage(); 
 		menuBg2.setIcon(new ImageIcon(image_bgtop));
 		menuBg2.setBounds(0, 0, 1294, 552);
 		panel.add(menuBg2);
 		
-		// creating player object
+		//creating player object
 		BasicPlayer player = new BasicPlayer();
 		
 		//creating original and alt image to display between mouse hovering on or off button
 		java.awt.Image image0 = new ImageIcon("images/ssbtn_hoverOFF.png").getImage(); 
 		java.awt.Image image1 = new ImageIcon("images/ssbtn_hoverON.png").getImage(); 
 
-		//button for song 1
+		//button song 1
 		JButton btnSong1 = new JButton("");
 		btnSong1.setIcon(new ImageIcon(image0));
 		btnSong1.setOpaque(false);
@@ -117,7 +120,7 @@ public class Song_selectUI extends JFrame{
 		});
 		btnSong1.setBorder(null);
 		
-		//button for song 2
+		//button song 2
 		JButton btnSong2 = new JButton("");
 		btnSong2.setIcon(new ImageIcon(image0));
 		btnSong2.setOpaque(false);
@@ -156,7 +159,7 @@ public class Song_selectUI extends JFrame{
 		});
 		btnSong2.setBorder(null);
 	
-		//button for song 3
+		//button song  3
 		JButton btnSong3 = new JButton("");
 		btnSong3.setIcon(new ImageIcon(image0));
 		btnSong3.setOpaque(false);

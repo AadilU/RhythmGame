@@ -22,7 +22,6 @@ public class AudioStatus {
 		songs.add("audio/click2.wav");
 		
 		String pathToFile = System.getProperty("user.dir") +"/"+ songs.get(i);
-		songs.get(i);
 
 			try {
 			    player.open(new URL("file:///" + pathToFile));

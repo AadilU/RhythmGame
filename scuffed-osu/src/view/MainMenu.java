@@ -73,9 +73,6 @@ public class MainMenu extends JFrame {
 		panel.setBounds(0, 0, 1323, 702);
 		getContentPane().add(panel);
 		panel.setLayout(null);
-		
-		
-
 
 		/*
 		 *creates start button
@@ -104,22 +101,6 @@ public class MainMenu extends JFrame {
 				dispose();
 			}
 		});
-		
-		//experimental (change image to display alternate when mouse hovers over bounded area, otherwise displays original image)
-		//doesn't do anything rn, both images r the same
-		btnStart.addMouseListener(new MouseAdapter() 
-		{
-			@Override
-			public void mouseEntered(MouseEvent e) 
-			{
-				btnStart.setIcon(new ImageIcon(image));
-			}
-			public void mouseExited(MouseEvent e) 
-			{
-				btnStart.setIcon(new ImageIcon(image));
-			}
-		});
-		btnStart.setBorder(null);
 		
 		//background image
 		JLabel menuBg = new JLabel("");
