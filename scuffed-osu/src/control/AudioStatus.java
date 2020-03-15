@@ -21,9 +21,6 @@ public class AudioStatus {
 		songs.add("audio/blendw.mp3");
 		songs.add("audio/click2.wav");
 		
-		//BasicPLayer object
-		//BasicPlayer player = new BasicPlayer();
-		
 		String pathToFile = System.getProperty("user.dir") +"/"+ songs.get(i);
 		songs.get(i);
 
