@@ -43,6 +43,13 @@ public class Song_selectUI extends JFrame{
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
+		JLabel lblgetSongName = new JLabel("(get song info)");
+		lblgetSongName.setForeground(Color.WHITE);
+		lblgetSongName.setFont(new Font("SansSerif", Font.PLAIN, 32));
+		lblgetSongName.setBackground(Color.BLACK);
+		lblgetSongName.setBounds(38, 21, 481, 50);
+		panel.add(lblgetSongName);
+		
 		//creating interface 
 		
 		//scoreboard
@@ -50,15 +57,42 @@ public class Song_selectUI extends JFrame{
 		lblLocalScores.setForeground(Color.WHITE);
 		lblLocalScores.setBackground(Color.BLACK);
 		lblLocalScores.setFont(new Font("SansSerif", Font.PLAIN, 32));
-		
 		lblLocalScores.setBounds(38, 102, 278, 50);
 		panel.add(lblLocalScores);
 		
-		JLabel lblscore1 = new JLabel("(after information stored in database, create label, get and display score to label)");
+	
+		// idea: display by most recent score (replace lower text with upper text for each Jlabel,
+		//       as a result, lowest text is no longer displayed after next game during maximum Jlabels occupied, 
+		//       creates room for new score (text) at top of scoreboard) 
+		JLabel lblscore1 = new JLabel("(pending)");
 		lblscore1.setForeground(Color.WHITE);
 		lblscore1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblscore1.setBounds(38, 159, 530, 36);
 		panel.add(lblscore1);
+		
+		JLabel lblscore2 = new JLabel("(pending)");
+		lblscore2.setForeground(Color.WHITE);
+		lblscore2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblscore2.setBounds(38, 200, 530, 36);
+		panel.add(lblscore2);
+		
+		JLabel lblscore3 = new JLabel("(pending)");
+		lblscore3.setForeground(Color.WHITE);
+		lblscore3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblscore3.setBounds(38, 241, 530, 36);
+		panel.add(lblscore3);
+		
+		JLabel lblscore4 = new JLabel("(pending)");
+		lblscore4.setForeground(Color.WHITE);
+		lblscore4.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblscore4.setBounds(38, 282, 530, 36);
+		panel.add(lblscore4);
+		
+		JLabel lblscore5 = new JLabel("(pending)");
+		lblscore5.setForeground(Color.WHITE);
+		lblscore5.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblscore5.setBounds(38, 323, 530, 36);
+		panel.add(lblscore5);
 		
 		//interface bottom panel
 		JLabel menuBg1 = new JLabel("");
@@ -81,6 +115,14 @@ public class Song_selectUI extends JFrame{
 		java.awt.Image image0 = new ImageIcon("images/ssbtn_hoverOFF.png").getImage(); 
 		java.awt.Image image1 = new ImageIcon("images/ssbtn_hoverON.png").getImage(); 
 
+		//label song 1
+		JLabel lblSong1 = new JLabel("(get song info)");
+		lblSong1.setForeground(Color.WHITE);
+		lblSong1.setFont(new Font("SansSerif", Font.PLAIN, 26));
+		lblSong1.setBackground(Color.BLACK);
+		lblSong1.setBounds(756, 100, 667, 96);
+		panel.add(lblSong1);
+		
 		//button song 1
 		JButton btnSong1 = new JButton("");
 		btnSong1.setIcon(new ImageIcon(image0));
@@ -119,6 +161,14 @@ public class Song_selectUI extends JFrame{
 			}
 		});
 		btnSong1.setBorder(null);
+	
+		//label song 2
+		JLabel lblSong2 = new JLabel("(get song info)");
+		lblSong2.setForeground(Color.WHITE);
+		lblSong2.setFont(new Font("SansSerif", Font.PLAIN, 26));
+		lblSong2.setBackground(Color.BLACK);
+		lblSong2.setBounds(756, 200, 667, 96);
+		panel.add(lblSong2);
 		
 		//button song 2
 		JButton btnSong2 = new JButton("");
@@ -159,6 +209,14 @@ public class Song_selectUI extends JFrame{
 		});
 		btnSong2.setBorder(null);
 	
+		//label song 3
+		JLabel lblSong3 = new JLabel("(get song info)");
+		lblSong3.setForeground(Color.WHITE);
+		lblSong3.setFont(new Font("SansSerif", Font.PLAIN, 26));
+		lblSong3.setBackground(Color.BLACK);
+		lblSong3.setBounds(756, 300, 667, 96);
+		panel.add(lblSong3);
+		
 		//button song  3
 		JButton btnSong3 = new JButton("");
 		btnSong3.setIcon(new ImageIcon(image0));
@@ -197,7 +255,7 @@ public class Song_selectUI extends JFrame{
 			}
 		});
 		btnSong3.setBorder(null);
-		
+			
 		//background image
 		JLabel menuBg = new JLabel("");
 		java.awt.Image imageBg = new ImageIcon("images/ssbg.jpg").getImage();
