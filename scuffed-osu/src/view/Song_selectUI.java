@@ -17,6 +17,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JTextPane;
 
+import control.AudioStatus;
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import javazoom.jlgui.basicplayer.BasicPlayerException;
 
@@ -32,21 +33,6 @@ public class Song_selectUI extends JFrame{
 	private static final long serialVersionUID = 1L;
 
 	public Song_selectUI() {
-		//setting up songs and audio sound effects to play in song selection menu
-		BasicPlayer player = new BasicPlayer();
-		
-		String songName1 = "audio/armageddon.mp3";
-		String pathToMp3_1 = System.getProperty("user.dir") +"/"+ songName1;
-		
-		String songName2 = "audio/dualfractal.mp3";
-		String pathToMp3_2 = System.getProperty("user.dir") +"/"+ songName2;
-		
-		String songName3 = "audio/blendw.mp3";
-		String pathToMp3_3 = System.getProperty("user.dir") +"/"+ songName3;
-		
-		String click = "audio/click2.wav";
-		String pathToWav = System.getProperty("user.dir") +"/"+ click;
-
 		//creating frame
 		setBounds(0, 0, 1270, 720); 
 		getContentPane().setBackground(Color.WHITE);
@@ -100,20 +86,8 @@ public class Song_selectUI extends JFrame{
 		
 		btnSong1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-				try {
-					player.stop(); 
-				} catch (BasicPlayerException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				try {
-				    player.open(new URL("file:///" + pathToWav));
-				    player.play();
-				} catch (BasicPlayerException | MalformedURLException e1) {
-				    e1.printStackTrace();
-				}
+				AudioStatus.SongSet(0, false);
+				AudioStatus.SongSet(5, true);
 				
 				BeatmapUI frame = new BeatmapUI(); 
 				frame.setVisible(true); 
@@ -128,25 +102,13 @@ public class Song_selectUI extends JFrame{
 			public void mouseEntered(MouseEvent e) 
 			{
 				btnSong1.setIcon(new ImageIcon(image1));
-				
-				try {
-				    player.open(new URL("file:///" + pathToMp3_1));
-				    player.play();
-				} catch (BasicPlayerException | MalformedURLException e1) {
-				    e1.printStackTrace();
-				}
+				AudioStatus.SongSet(2, true);
 				
 			}
 			public void mouseExited(MouseEvent e) 
 			{
 				btnSong1.setIcon(new ImageIcon(image0));
-				
-				try {
-					player.stop(); 
-				} catch (BasicPlayerException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+				AudioStatus.SongSet(0, false);
 				
 			}
 		});
@@ -164,19 +126,8 @@ public class Song_selectUI extends JFrame{
 		btnSong2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				try {
-					player.stop(); 
-				} catch (BasicPlayerException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				try {
-				    player.open(new URL("file:///" + pathToWav));
-				    player.play();
-				} catch (BasicPlayerException | MalformedURLException e1) {
-				    e1.printStackTrace();
-				}
+				AudioStatus.SongSet(0, false);
+				AudioStatus.SongSet(5, true);
 				
 				BeatmapUI frame = new BeatmapUI(); 
 				frame.setVisible(true); 
@@ -191,24 +142,12 @@ public class Song_selectUI extends JFrame{
 			public void mouseEntered(MouseEvent e) 
 			{
 				btnSong2.setIcon(new ImageIcon(image1));
-				
-				try {
-				    player.open(new URL("file:///" + pathToMp3_2));
-				    player.play();
-				} catch (BasicPlayerException | MalformedURLException e1) {
-				    e1.printStackTrace();
-				}
+				AudioStatus.SongSet(3, true);
 			}
 			public void mouseExited(MouseEvent e) 
 			{
 				btnSong2.setIcon(new ImageIcon(image0));
-				
-				try {
-					player.stop(); 
-				} catch (BasicPlayerException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+				AudioStatus.SongSet(0, false);
 				
 			}
 		});
@@ -226,19 +165,8 @@ public class Song_selectUI extends JFrame{
 		btnSong3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				try {
-					player.stop(); 
-				} catch (BasicPlayerException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-				try {
-				    player.open(new URL("file:///" + pathToWav));
-				    player.play();
-				} catch (BasicPlayerException | MalformedURLException e1) {
-				    e1.printStackTrace();
-				}
+				AudioStatus.SongSet(0, false);
+				AudioStatus.SongSet(5, true);
 				
 				BeatmapUI frame = new BeatmapUI(); 
 				frame.setVisible(true); 
@@ -253,24 +181,12 @@ public class Song_selectUI extends JFrame{
 			public void mouseEntered(MouseEvent e) 
 			{
 				btnSong3.setIcon(new ImageIcon(image1));
-
-				try {
-				    player.open(new URL("file:///" + pathToMp3_3));
-				    player.play();
-				} catch (BasicPlayerException | MalformedURLException e1) {
-				    e1.printStackTrace();
-				}
+				AudioStatus.SongSet(4, true);
 			}
 			public void mouseExited(MouseEvent e) 
 			{
 				btnSong3.setIcon(new ImageIcon(image0));
-				
-				try {
-					player.stop(); 
-				} catch (BasicPlayerException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
+				AudioStatus.SongSet(0, false);
 				
 			}
 		});
