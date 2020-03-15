@@ -5,6 +5,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import view.BeatmapUI;
@@ -26,17 +28,25 @@ public class MouseStatus {
 				}
 		}
 	
-	public static void state(JButton btnSong, Image image0, Image image1, BasicPlayer player, int i) {	
+	public static void state(JPanel panel, JLabel menuBg, JButton btnSong, Image image0, Image image1, int i, BasicPlayer player, int j) {	
 		btnSong.addMouseListener(new MouseAdapter() {
+			
+			String imageBg;
 			
 			@Override
 			public void mouseEntered(MouseEvent e) 	{
 				btnSong.setIcon(new ImageIcon(image1));
-				AudioStatus.songSet(player, i);
+				AudioStatus.songSet(player, j);
+				
+				imageBg = BackgroundStatus.setBg(i);
+				SongSelectUI.setSSBg(panel, menuBg, imageBg);
 			}
 			public void mouseExited(MouseEvent e) {
 				btnSong.setIcon(new ImageIcon(image0));
 				AudioStatus.songStop(player);	
+				
+				imageBg = BackgroundStatus.setBg(0);
+				SongSelectUI.setSSBg(panel, menuBg, imageBg);
 			}
 		});
 	}

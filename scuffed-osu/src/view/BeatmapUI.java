@@ -4,13 +4,6 @@ import java.awt.Color;
 import java.awt.Panel;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollBar;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JTextPane;
-import javax.swing.JLabel;
-import java.awt.Font;
 
 public class BeatmapUI extends JFrame{
 	/**

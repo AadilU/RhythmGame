@@ -9,6 +9,7 @@ import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
+import control.BackgroundStatus;
 import control.MouseStatus;
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import javax.swing.JLabel;
@@ -31,6 +32,10 @@ public class SongSelectUI extends JFrame{
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
+		//creating menu background object
+		JLabel menuBg = new JLabel("");
+		
+		//song header
 		JLabel lblgetSongName = new JLabel("(get song info)");
 		lblgetSongName.setForeground(Color.WHITE);
 		lblgetSongName.setFont(new Font("SansSerif", Font.PLAIN, 32));
@@ -81,7 +86,7 @@ public class SongSelectUI extends JFrame{
 		lblscore5.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblscore5.setBounds(38, 323, 530, 36);
 		panel.add(lblscore5);
-		
+	
 		//interface bottom panel
 		JLabel menuBg1 = new JLabel("");
 		java.awt.Image image_bgbot = new ImageIcon("images/ssi_bot.png").getImage(); //osu skin: Cookiezi 29 2018-03-18
@@ -123,7 +128,7 @@ public class SongSelectUI extends JFrame{
 				dispose();
 			}
 		});
-		MouseStatus.state(btnSong1, image0, image1, player, 2);	
+		MouseStatus.state(panel, menuBg, btnSong1, image0, image1, 1, player, 2);	
 
 		//label song 2
 		JLabel lblSong2 = new JLabel("(get song info)");
@@ -145,7 +150,7 @@ public class SongSelectUI extends JFrame{
 				dispose();
 			}
 		});	
-		MouseStatus.state(btnSong2, image0, image1, player, 3);	
+		MouseStatus.state(panel, menuBg, btnSong2, image0, image1, 2, player, 3);	
 		
 		//label song 3
 		JLabel lblSong3 = new JLabel("(get song info)");
@@ -167,14 +172,15 @@ public class SongSelectUI extends JFrame{
 				dispose();
 			}
 		});
-		MouseStatus.state(btnSong3, image0, image1, player, 4);	
-			
-		//background image
-		JLabel menuBg = new JLabel("");
-		java.awt.Image imageBg = new ImageIcon("images/ssbg.jpg").getImage();
-		menuBg.setIcon(new ImageIcon(imageBg));
+		MouseStatus.state(panel, menuBg, btnSong3, image0, image1, 3, player, 4);	
+		
+	}
+	
+	public static void setSSBg(JPanel panel, JLabel menuBg, String image_bg) {
+		menuBg.setIcon(new ImageIcon(image_bg));
 		menuBg.setBounds(0, 0, 1294, 681);
 		panel.add(menuBg);
 	}
+
 	
 }
