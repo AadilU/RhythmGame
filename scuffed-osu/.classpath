@@ -7,5 +7,9 @@
 	<classpathentry kind="lib" path="C:/Users/coryk/Downloads/BasicPlayer3.0/lib/jl1.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/coryk/Downloads/BasicPlayer3.0/lib/commons-logging-api.jar"/>
 	<classpathentry kind="lib" path="C:/Users/coryk/Downloads/BasicPlayer3.0/basicplayer3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/coryk/Downloads/BasicPlayer3.0/lib/jogg-0.0.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/coryk/Downloads/BasicPlayer3.0/lib/jorbis-0.0.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/coryk/Downloads/BasicPlayer3.0/lib/jspeex0.9.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/coryk/Downloads/BasicPlayer3.0/lib/vorbisspi1.0.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
