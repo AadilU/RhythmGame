@@ -10,7 +10,7 @@ import javazoom.jlgui.basicplayer.BasicPlayer;
 import javazoom.jlgui.basicplayer.BasicPlayerException;
 
 public class AudioStatus {
-	public static void SongSet(BasicPlayer player, int i) {
+	public static void songSet(BasicPlayer player, int i) {
 
 		//arraylist of audio files
 		ArrayList<String> songs = new ArrayList<String>();
@@ -31,7 +31,8 @@ public class AudioStatus {
 			}
 	}
 	
-	public static void SongStop(BasicPlayer player) {
+	public static void songStop(BasicPlayer player) {
+
 			try {
 				player.stop(); 
 			} catch (BasicPlayerException e1) {

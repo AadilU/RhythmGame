@@ -18,6 +18,7 @@ import javax.swing.JButton;
 import javax.swing.JTextPane;
 
 import control.AudioStatus;
+import control.MouseStatus;
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import javazoom.jlgui.basicplayer.BasicPlayerException;
 
@@ -26,13 +27,13 @@ import java.awt.Font;
 import javax.swing.JTextArea;
 import java.awt.List;
 
-public class Song_selectUI extends JFrame{
+public class SongSelectUI extends JFrame{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public Song_selectUI() {
+	public SongSelectUI() {
 		//creating frame
 		setBounds(0, 0, 1270, 720); 
 		getContentPane().setBackground(Color.WHITE);
@@ -134,8 +135,8 @@ public class Song_selectUI extends JFrame{
 		
 		btnSong1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				AudioStatus.SongStop(player);
-				AudioStatus.SongSet(player, 5);
+				AudioStatus.songStop(player);
+				AudioStatus.songSet(player, 5);
 				
 				BeatmapUI frame = new BeatmapUI(); 
 				frame.setVisible(true); 
@@ -143,23 +144,10 @@ public class Song_selectUI extends JFrame{
 				dispose();
 			}
 		});
+	
+		MouseStatus.state(btnSong1, image0, image1, player, 2);
+			
 		
-		btnSong1.addMouseListener(new MouseAdapter() 
-		{
-			@Override
-			public void mouseEntered(MouseEvent e) 
-			{
-				btnSong1.setIcon(new ImageIcon(image1));
-				AudioStatus.SongSet(player, 2);
-				
-			}
-			public void mouseExited(MouseEvent e) 
-			{
-				btnSong1.setIcon(new ImageIcon(image0));
-				AudioStatus.SongStop(player);
-				
-			}
-		});
 		btnSong1.setBorder(null);
 	
 		//label song 2
@@ -182,8 +170,8 @@ public class Song_selectUI extends JFrame{
 		btnSong2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				AudioStatus.SongStop(player);
-				AudioStatus.SongSet(player, 5);
+				AudioStatus.songStop(player);
+				AudioStatus.songSet(player, 5);
 				
 				BeatmapUI frame = new BeatmapUI(); 
 				frame.setVisible(true); 
@@ -192,18 +180,15 @@ public class Song_selectUI extends JFrame{
 			}
 		});
 		
-		btnSong2.addMouseListener(new MouseAdapter() 
-		{
+		btnSong2.addMouseListener(new MouseAdapter() {
 			@Override
-			public void mouseEntered(MouseEvent e) 
-			{
+			public void mouseEntered(MouseEvent e) 	{
 				btnSong2.setIcon(new ImageIcon(image1));
-				AudioStatus.SongSet(player, 3);
+				AudioStatus.songSet(player, 3);
 			}
-			public void mouseExited(MouseEvent e) 
-			{
+			public void mouseExited(MouseEvent e) {
 				btnSong2.setIcon(new ImageIcon(image0));
-				AudioStatus.SongStop(player);
+				AudioStatus.songStop(player);
 				
 			}
 		});
@@ -229,8 +214,8 @@ public class Song_selectUI extends JFrame{
 		btnSong3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				AudioStatus.SongStop(player);
-				AudioStatus.SongSet(player, 5);
+				AudioStatus.songStop(player);
+				AudioStatus.songSet(player, 5);
 				
 				BeatmapUI frame = new BeatmapUI(); 
 				frame.setVisible(true); 
@@ -245,12 +230,12 @@ public class Song_selectUI extends JFrame{
 			public void mouseEntered(MouseEvent e) 
 			{
 				btnSong3.setIcon(new ImageIcon(image1));
-				AudioStatus.SongSet(player, 4);
+				AudioStatus.songSet(player, 4);
 			}
 			public void mouseExited(MouseEvent e) 
 			{
 				btnSong3.setIcon(new ImageIcon(image0));
-				AudioStatus.SongStop(player);
+				AudioStatus.songStop(player);
 				
 			}
 		});
