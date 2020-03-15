@@ -135,21 +135,12 @@ public class SongSelectUI extends JFrame{
 		
 		btnSong1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				AudioStatus.songStop(player);
-				AudioStatus.songSet(player, 5);
-				
-				BeatmapUI frame = new BeatmapUI(); 
-				frame.setVisible(true); 
-				
+				MouseStatus.action(player);
 				dispose();
 			}
 		});
-	
-		MouseStatus.state(btnSong1, image0, image1, player, 2);
-			
-		
-		btnSong1.setBorder(null);
-	
+		MouseStatus.state(btnSong1, image0, image1, player, 2);	
+
 		//label song 2
 		JLabel lblSong2 = new JLabel("(get song info)");
 		lblSong2.setForeground(Color.WHITE);
@@ -166,34 +157,15 @@ public class SongSelectUI extends JFrame{
 		btnSong2.setContentAreaFilled(false);
 		btnSong2.setBounds(610, 200, 667, 96);
 		panel.add(btnSong2);
-		
+	
 		btnSong2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-				AudioStatus.songStop(player);
-				AudioStatus.songSet(player, 5);
-				
-				BeatmapUI frame = new BeatmapUI(); 
-				frame.setVisible(true); 
-				
+				MouseStatus.action(player);
 				dispose();
 			}
-		});
+		});	
+		MouseStatus.state(btnSong2, image0, image1, player, 3);	
 		
-		btnSong2.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseEntered(MouseEvent e) 	{
-				btnSong2.setIcon(new ImageIcon(image1));
-				AudioStatus.songSet(player, 3);
-			}
-			public void mouseExited(MouseEvent e) {
-				btnSong2.setIcon(new ImageIcon(image0));
-				AudioStatus.songStop(player);
-				
-			}
-		});
-		btnSong2.setBorder(null);
-	
 		//label song 3
 		JLabel lblSong3 = new JLabel("(get song info)");
 		lblSong3.setForeground(Color.WHITE);
@@ -213,33 +185,11 @@ public class SongSelectUI extends JFrame{
 		
 		btnSong3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				AudioStatus.songStop(player);
-				AudioStatus.songSet(player, 5);
-				
-				BeatmapUI frame = new BeatmapUI(); 
-				frame.setVisible(true); 
-				
+				MouseStatus.action(player);
 				dispose();
 			}
 		});
-		
-		btnSong3.addMouseListener(new MouseAdapter() 
-		{
-			@Override
-			public void mouseEntered(MouseEvent e) 
-			{
-				btnSong3.setIcon(new ImageIcon(image1));
-				AudioStatus.songSet(player, 4);
-			}
-			public void mouseExited(MouseEvent e) 
-			{
-				btnSong3.setIcon(new ImageIcon(image0));
-				AudioStatus.songStop(player);
-				
-			}
-		});
-		btnSong3.setBorder(null);
+		MouseStatus.state(btnSong3, image0, image1, player, 4);	
 			
 		//background image
 		JLabel menuBg = new JLabel("");
