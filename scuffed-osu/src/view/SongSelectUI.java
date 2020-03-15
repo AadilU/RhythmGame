@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import control.BtnDefault;
+
 import control.MouseStatus;
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import javax.swing.JLabel;

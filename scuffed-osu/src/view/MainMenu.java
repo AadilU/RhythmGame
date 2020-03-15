@@ -5,7 +5,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import control.AudioStatus;
-import control.BtnDefault;
 import control.MouseStatus;
 
 import java.awt.event.ActionListener;
