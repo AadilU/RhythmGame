@@ -102,7 +102,7 @@ public class SongSelectUI extends JFrame{
 		//button song 1
 		JButton btnSong1 = new JButton("");
 		BtnDefault.appear(btnSong1, image0);
-		btnSong1.setBounds(610, 102, 670, 96);
+		btnSong1.setBounds(610, 102, 670, 102);
 		panel.add(btnSong1);
 		
 		btnSong1.addActionListener(new ActionListener() {
@@ -112,20 +112,20 @@ public class SongSelectUI extends JFrame{
 			}
 		});
 		MouseStatus.state(panel, menuBg, btnSong1, image0, image1, 1, player, 2); //check MouseStatus class in control package for comments of this method
-
-		//label song 2
-		JLabel lblSong2 = new JLabel("(get song info)");
-		lblSong2.setVerticalAlignment(SwingConstants.TOP);
-		lblSong2.setForeground(Color.WHITE);
-		lblSong2.setFont(new Font("SansSerif", Font.PLAIN, 26));
-		lblSong2.setBackground(Color.BLACK);
-		lblSong2.setBounds(756, 200, 667, 96);
-		panel.add(lblSong2);
+		
+				//label song 2
+				JLabel lblSong2 = new JLabel("(get song info)");
+				lblSong2.setVerticalAlignment(SwingConstants.TOP);
+				lblSong2.setForeground(Color.WHITE);
+				lblSong2.setFont(new Font("SansSerif", Font.PLAIN, 26));
+				lblSong2.setBackground(Color.BLACK);
+				lblSong2.setBounds(756, 200, 667, 96);
+				panel.add(lblSong2);
 		
 		//button song 2
 		JButton btnSong2 = new JButton("");
 		BtnDefault.appear(btnSong2, image0);
-		btnSong2.setBounds(610, 202, 670, 96);
+		btnSong2.setBounds(610, 204, 670, 102);
 		panel.add(btnSong2);
 		
 		btnSong2.addActionListener(new ActionListener() {
@@ -148,7 +148,7 @@ public class SongSelectUI extends JFrame{
 		//button song  3
 		JButton btnSong3 = new JButton("");
 		BtnDefault.appear(btnSong3, image0);
-		btnSong3.setBounds(610, 302, 670, 96);
+		btnSong3.setBounds(610, 306, 670, 102);
 		panel.add(btnSong3);
 		
 		btnSong3.addActionListener(new ActionListener() {
