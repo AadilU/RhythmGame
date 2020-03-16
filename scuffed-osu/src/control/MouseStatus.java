@@ -25,43 +25,15 @@ public class MouseStatus {
 
 		AudioStatus.songStop(player);
 		AudioStatus.songSet(player, 5);
-		
-		Background frame0 = new Background();
-		SongSelectUI frame1 = new SongSelectUI();
-		BeatmapUI frame2 = new BeatmapUI();
-		
+
 		if(i == 0) {
-		    frame0.setVisible(true);
-		    new java.util.Timer().schedule(new TimerTask(){
-		        @Override
-		        public void run() {
-		           frame1.setVisible(true);
-		        }
-		    }, (700)); 
-		   
-		    new java.util.Timer().schedule(new TimerTask(){
-		        @Override
-		        public void run() {
-		           frame0.setVisible(false);
-		        }
-		    }, (700));
+			SongSelectUI frame = new SongSelectUI();
+		    frame.setVisible(true);
 		}
 		
 		if(i == 1) {
-			frame0.setVisible(true);
-			new java.util.Timer().schedule(new TimerTask(){
-		        @Override
-		        public void run() {
-		           frame2.setVisible(true);
-		        }
-		    }, (700)); 
-	
-			new java.util.Timer().schedule(new TimerTask(){
-		        @Override
-		        public void run() {
-		           frame0.setVisible(false);
-		        }
-		    }, (700));
+			BeatmapUI frame = new BeatmapUI();
+		    frame.setVisible(true);
 		}
 	}
 	
