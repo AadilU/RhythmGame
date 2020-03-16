@@ -96,7 +96,7 @@ public class SongSelectUI extends JFrame{
 		JLabel menuBg1 = new JLabel("");
 		java.awt.Image image_bgbot = new ImageIcon("images/ssi_bot.png").getImage(); //osu skin: Cookiezi 29 2018-03-18
 		menuBg1.setIcon(new ImageIcon(image_bgbot));
-		menuBg1.setBounds(-37, -31, 1294, 770);
+		menuBg1.setBounds(0, 0, 1331, 772);
 		panel.add(menuBg1);
 		
 		//interface top panel

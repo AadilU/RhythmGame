@@ -5,9 +5,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import control.AudioStatus;
+import control.BackgroundStatus;
 import control.MouseStatus;
 
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javazoom.jlgui.basicplayer.BasicPlayer;
@@ -74,6 +77,19 @@ public class MainMenu extends JFrame {
 			}
 		});
 		
+		btnStart.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) 	{
+				btnStart.setBounds(395, 110, 480, 480);
+				btnStart.setIcon(new ImageIcon("images/logo.png"));
+			}
+			public void mouseExited(MouseEvent e) {
+				
+				btnStart.setBounds(420, 135, 430, 430);
+				btnStart.setIcon(new ImageIcon("images/logo1.png"));
+			}
+		});
+
 		//background image
 		JLabel menuBg = new JLabel("");
 		java.awt.Image image_bg = new ImageIcon("images/bg1.jpg").getImage(); //wallpaper at https://www.dropbox.com/sh/t0lw1xhmhqdrbmg/AAD-3ryQA2KhWcNga6JLCP4xa?dl=0
