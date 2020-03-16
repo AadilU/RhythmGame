@@ -8,14 +8,20 @@ import java.util.List;
 
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import javazoom.jlgui.basicplayer.BasicPlayerException;
-import model.AudioList;
 
 public class AudioStatus {
-	
-	//method for playing song according to index value 
 	public static void songSet(BasicPlayer player, int i) {
 
-		String pathToFile = System.getProperty("user.dir") +"/"+ AudioList.getSong(i);
+		//arraylist of audio files
+		ArrayList<String> songs = new ArrayList<String>();
+		songs.add("no song"); 					
+		songs.add("audio/carnation.mp3");
+		songs.add("audio/armageddon.mp3");
+		songs.add("audio/dualfractal.mp3");
+		songs.add("audio/blendw.mp3");
+		songs.add("audio/click2.wav");
+		
+		String pathToFile = System.getProperty("user.dir") +"/"+ songs.get(i);
 
 			try {
 			    player.open(new URL("file:///" + pathToFile));
@@ -25,7 +31,6 @@ public class AudioStatus {
 			}
 	}
 	
-	//method for stopping song
 	public static void songStop(BasicPlayer player) {
 
 			try {

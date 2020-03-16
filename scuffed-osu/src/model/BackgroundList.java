@@ -1,10 +1,11 @@
-package control;
+package model;
 
 import java.util.ArrayList;
 
-public class BackgroundStatus {
+public class BackgroundList {
 	
-	public static String setBg(int i) {
+	//method for 
+	public static String getBg(int i) {
 	
 	ArrayList<String> bg_images = new ArrayList<String>();
 	bg_images.add("images/bg1.jpg"); 					

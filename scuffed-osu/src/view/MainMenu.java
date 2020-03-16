@@ -1,11 +1,11 @@
 package view;
 import java.awt.EventQueue;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import control.AudioStatus;
-import control.BackgroundStatus;
 import control.MouseStatus;
 
 import java.awt.event.ActionListener;
