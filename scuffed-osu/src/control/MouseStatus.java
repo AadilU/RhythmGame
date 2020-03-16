@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import model.BackgroundList;
+import view.Background;
 import view.BeatmapUI;
 import view.SongSelectUI;
 
@@ -25,25 +26,44 @@ public class MouseStatus {
 		AudioStatus.songStop(player);
 		AudioStatus.songSet(player, 5);
 		
+		Background frame0 = new Background();
+		SongSelectUI frame1 = new SongSelectUI();
+		BeatmapUI frame2 = new BeatmapUI();
+		
 		if(i == 0) {
-			SongSelectUI frame = new SongSelectUI(); 
+		    frame0.setVisible(true);
 		    new java.util.Timer().schedule(new TimerTask(){
 		        @Override
 		        public void run() {
-		           frame.setVisible(true);
+		           frame1.setVisible(true);
 		        }
-		    }, (650)); 
+		    }, (700)); 
+		   
+		    new java.util.Timer().schedule(new TimerTask(){
+		        @Override
+		        public void run() {
+		           frame0.setVisible(false);
+		        }
+		    }, (700));
 		}
+		
 		if(i == 1) {
-			BeatmapUI frame = new BeatmapUI(); 
+			frame0.setVisible(true);
 			new java.util.Timer().schedule(new TimerTask(){
 		        @Override
 		        public void run() {
-		           frame.setVisible(true);
+		           frame2.setVisible(true);
 		        }
-		    }, (650)); 
-			}
+		    }, (700)); 
+	
+			new java.util.Timer().schedule(new TimerTask(){
+		        @Override
+		        public void run() {
+		           frame0.setVisible(false);
+		        }
+		    }, (700));
 		}
+	}
 	
 	//method for: (depending on if mouse is in or out of bounds of button) switches between original and alt image, plays song according to selection, and sets background according to song
 	public static void state(JPanel panel, JLabel menuBg, JButton btnSong, Image image0, Image image1, int i, BasicPlayer player, int j) {	

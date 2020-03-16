@@ -124,12 +124,7 @@ public class SongSelectUI extends JFrame{
 		btnSong1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MouseStatus.action(player, 1); //check MouseStatus class in control package for comments of this method
-				new java.util.Timer().schedule(new TimerTask(){
-			        @Override
-			        public void run() {
-			        	dispose();//closes previous frame
-			        }
-			    },650); 
+				dispose();//closes previous frame
 			}
 		});
 		MouseStatus.state(panel, menuBg, btnSong1, image0, image1, 1, player, 2); //check MouseStatus class in control package for comments of this method
@@ -152,12 +147,7 @@ public class SongSelectUI extends JFrame{
 		btnSong2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MouseStatus.action(player, 1); 	//check MouseStatus class in control package for comments of this method
-				new java.util.Timer().schedule(new TimerTask(){
-			        @Override
-			        public void run() {
-			        	dispose();//closes previous frame
-			        }
-			    },650); 
+			    dispose();//closes previous frame
 			}
 		});	
 		MouseStatus.state(panel, menuBg, btnSong2, image0, image1, 2, player, 3); //check MouseStatus class in control package for comments of this method
@@ -180,12 +170,7 @@ public class SongSelectUI extends JFrame{
 		btnSong3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MouseStatus.action(player, 1); //check MouseStatus class in control package for comments of this method
-				new java.util.Timer().schedule(new TimerTask(){
-			        @Override
-			        public void run() {
-			        	dispose();//closes previous frame
-			        }
-			    },650); 
+				dispose();//closes previous frame
 			}
 		});
 		MouseStatus.state(panel, menuBg, btnSong3, image0, image1, 3, player, 4); //check MouseStatus class in control package for comments of this method

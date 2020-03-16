@@ -63,12 +63,7 @@ public class MainMenu extends JFrame {
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {	
 				MouseStatus.action(player, 0); 	//stops main menu music, plays click sound, opens song selection ui
-				new java.util.Timer().schedule(new TimerTask(){
-			        @Override
-			        public void run() {
-			        	dispose();//closes previous frame
-			        }
-			    },650); 
+				dispose();//closes previous frame
 			}
 		});
 		
@@ -85,7 +80,7 @@ public class MainMenu extends JFrame {
 				btnStart.setIcon(new ImageIcon("images/logo1.png"));
 			}
 		});
-
+	
 		//background image
 		JLabel menuBg = new JLabel("");
 		java.awt.Image image_bg = new ImageIcon("images/bg1.jpg").getImage(); //wallpaper at https://www.dropbox.com/sh/t0lw1xhmhqdrbmg/AAD-3ryQA2KhWcNga6JLCP4xa?dl=0
