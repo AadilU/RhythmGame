@@ -12,6 +12,7 @@ public class BackgroundList {
 		bg_images.add("images/song1Bg.png");
 		bg_images.add("images/song2Bg.png");
 		bg_images.add("images/song3Bg.png");
+		bg_images.add("images/ssbg1.png");
 	
 		return bg_images.get(i);
 	}
