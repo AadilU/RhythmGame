@@ -11,6 +11,7 @@ import control.MouseStatus;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.TimerTask;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javazoom.jlgui.basicplayer.BasicPlayer;
@@ -62,7 +63,12 @@ public class MainMenu extends JFrame {
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {	
 				MouseStatus.action(player, 0); 	//stops main menu music, plays click sound, opens song selection ui
-				dispose(); 	//closes previous frame
+				new java.util.Timer().schedule(new TimerTask(){
+			        @Override
+			        public void run() {
+			        	dispose();//closes previous frame
+			        }
+			    },650); 
 			}
 		});
 		

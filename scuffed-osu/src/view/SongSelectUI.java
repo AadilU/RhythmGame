@@ -4,6 +4,8 @@ import java.awt.Color;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.TimerTask;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.ImageIcon;
@@ -122,7 +124,12 @@ public class SongSelectUI extends JFrame{
 		btnSong1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MouseStatus.action(player, 1); //check MouseStatus class in control package for comments of this method
-				dispose(); //closes previous frame
+				new java.util.Timer().schedule(new TimerTask(){
+			        @Override
+			        public void run() {
+			        	dispose();//closes previous frame
+			        }
+			    },650); 
 			}
 		});
 		MouseStatus.state(panel, menuBg, btnSong1, image0, image1, 1, player, 2); //check MouseStatus class in control package for comments of this method
@@ -145,7 +152,12 @@ public class SongSelectUI extends JFrame{
 		btnSong2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MouseStatus.action(player, 1); 	//check MouseStatus class in control package for comments of this method
-				dispose(); //closes previous frame
+				new java.util.Timer().schedule(new TimerTask(){
+			        @Override
+			        public void run() {
+			        	dispose();//closes previous frame
+			        }
+			    },650); 
 			}
 		});	
 		MouseStatus.state(panel, menuBg, btnSong2, image0, image1, 2, player, 3); //check MouseStatus class in control package for comments of this method
@@ -168,7 +180,12 @@ public class SongSelectUI extends JFrame{
 		btnSong3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MouseStatus.action(player, 1); //check MouseStatus class in control package for comments of this method
-				dispose(); //closes previous frame
+				new java.util.Timer().schedule(new TimerTask(){
+			        @Override
+			        public void run() {
+			        	dispose();//closes previous frame
+			        }
+			    },650); 
 			}
 		});
 		MouseStatus.state(panel, menuBg, btnSong3, image0, image1, 3, player, 4); //check MouseStatus class in control package for comments of this method
