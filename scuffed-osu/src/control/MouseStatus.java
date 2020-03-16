@@ -18,9 +18,7 @@ public class MouseStatus {
 	
 	//method for: stopping current song, playing click sound, and setting visibility to true for ui of song selection or beatmap
 	public static void action(BasicPlayer player, int i) {
-		AudioStatus.songStop(player);
-		AudioStatus.songSet(player, 5);
-		
+
 			if(i == 0) {
 				SongSelectUI frame = new SongSelectUI(); 
 				frame.setVisible(true); 
@@ -29,6 +27,9 @@ public class MouseStatus {
 				BeatmapUI frame = new BeatmapUI(); 
 				frame.setVisible(true); 
 				}
+			
+			AudioStatus.songStop(player);
+			AudioStatus.songSet(player, 5);
 		}
 	
 	//method for: (depending on if mouse is in or out of bounds of button) switches between original and alt image, plays song according to selection, and sets background according to song
@@ -38,13 +39,15 @@ public class MouseStatus {
 			@Override
 			public void mouseEntered(MouseEvent e) 	{
 				btnSong.setIcon(new ImageIcon(image1));
+				SongSelectUI.setSSBg(panel, menuBg, BackgroundList.getBg(i)); //check SongSelectUI class in view package for comments of this method
 				AudioStatus.songSet(player, j); //check AudioStatus class in control package for comments of this method
-				SongSelectUI.setSSBg(panel, menuBg, BackgroundList.getBg(i));
+				
 			}
 			public void mouseExited(MouseEvent e) {
 				btnSong.setIcon(new ImageIcon(image0));
-				AudioStatus.songStop(player); //check AudioStatus class in control package for comments of this method
 				SongSelectUI.setSSBg(panel, menuBg, BackgroundList.getBg(0)); //check SongSelectUI class in view package for comments of this method
+				AudioStatus.songStop(player); //check AudioStatus class in control package for comments of this method
+				
 			}
 		});
 	}
