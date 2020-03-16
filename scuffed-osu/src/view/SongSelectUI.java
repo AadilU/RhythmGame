@@ -90,6 +90,20 @@ public class SongSelectUI extends JFrame{
 		lblscore5.setBounds(38, 343, 530, 46);
 		panel.add(lblscore5);
 		
+		//interface bottom panel
+		JLabel menuBg1 = new JLabel("");
+		java.awt.Image image_bgbot = new ImageIcon("images/ssi_bot1.png").getImage(); //osu skin: Cookiezi 29 2018-03-18
+		menuBg1.setIcon(new ImageIcon(image_bgbot));
+		menuBg1.setBounds(0, 0, 1331, 772);
+		panel.add(menuBg1);
+		
+		//interface top panel
+		JLabel menuBg2 = new JLabel("");
+		java.awt.Image image_bgtop = new ImageIcon("images/ssi_top.png").getImage(); 
+		menuBg2.setIcon(new ImageIcon(image_bgtop));
+		menuBg2.setBounds(0, 0, 1294, 552);
+		panel.add(menuBg2);
+		
 		//label song 1
 		JLabel lblSong1 = new JLabel("(get song info)");
 		lblSong1.setVerticalAlignment(SwingConstants.TOP);
@@ -158,20 +172,6 @@ public class SongSelectUI extends JFrame{
 			}
 		});
 		MouseStatus.state(panel, menuBg, btnSong3, image0, image1, 3, player, 4); //check MouseStatus class in control package for comments of this method
-		
-		//interface bottom panel
-		JLabel menuBg1 = new JLabel("");
-		java.awt.Image image_bgbot = new ImageIcon("images/ssi_bot1.png").getImage(); //osu skin: Cookiezi 29 2018-03-18
-		menuBg1.setIcon(new ImageIcon(image_bgbot));
-		menuBg1.setBounds(0, 0, 1331, 772);
-		panel.add(menuBg1);
-		
-		//interface top panel
-		JLabel menuBg2 = new JLabel("");
-		java.awt.Image image_bgtop = new ImageIcon("images/ssi_top.png").getImage(); 
-		menuBg2.setIcon(new ImageIcon(image_bgtop));
-		menuBg2.setBounds(0, 0, 1294, 552);
-		panel.add(menuBg2);
 	
 		setSSBg(panel, menuBg, "images/ssbg1.png"); //sets default background
 	}
