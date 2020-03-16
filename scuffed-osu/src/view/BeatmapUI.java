@@ -12,6 +12,9 @@ public class BeatmapUI extends JFrame{
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/*
+	 * 
+	 */
 	public BeatmapUI() {
 		
 		setBounds(0, 0, 1270, 720); 

@@ -32,12 +32,12 @@ public class SongSelectUI extends JFrame{
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		//creating menu background object
-		JLabel menuBg = new JLabel("");
-		//creating music/sound player object
-		BasicPlayer player = new BasicPlayer();
-		//creating original and alt image to display between mouse hovering on or off button
-		java.awt.Image image0 = new ImageIcon("images/ssbtn_hoverOFF.png").getImage(); 
+		
+		JLabel menuBg = new JLabel(""); //creating menu background object
+		
+		BasicPlayer player = new BasicPlayer(); //creating music/sound player object
+		
+		java.awt.Image image0 = new ImageIcon("images/ssbtn_hoverOFF.png").getImage(); 	//creating original and alt image object to display between mouse hovering on or off button
 		java.awt.Image image1 = new ImageIcon("images/ssbtn_hoverON.png").getImage(); 
 		
 		//song header on interface top panel
@@ -47,9 +47,7 @@ public class SongSelectUI extends JFrame{
 		lblgetSongName.setBackground(Color.BLACK);
 		lblgetSongName.setBounds(38, 21, 481, 50);
 		panel.add(lblgetSongName);
-		
-		//creating interface 
-		
+
 		//scoreboard
 		JLabel lblLocalScores = new JLabel("LOCAL SCORES");
 		lblLocalScores.setForeground(Color.WHITE);
@@ -123,11 +121,11 @@ public class SongSelectUI extends JFrame{
 		
 		btnSong1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MouseStatus.action(player, 1);
-				dispose();
+				MouseStatus.action(player, 1); //check MouseStatus class in control package for comments of this method
+				dispose(); //closes previous frame
 			}
 		});
-		MouseStatus.state(panel, menuBg, btnSong1, image0, image1, 1, player, 2);	
+		MouseStatus.state(panel, menuBg, btnSong1, image0, image1, 1, player, 2); //check MouseStatus class in control package for comments of this method
 
 		//label song 2
 		JLabel lblSong2 = new JLabel("(get song info)");
@@ -144,13 +142,13 @@ public class SongSelectUI extends JFrame{
 		btnSong2.setBounds(610, 202, 670, 96);
 		panel.add(btnSong2);
 		
-			btnSong2.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					MouseStatus.action(player, 1);
-					dispose();
-				}
-			});	
-			MouseStatus.state(panel, menuBg, btnSong2, image0, image1, 2, player, 3);	
+		btnSong2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MouseStatus.action(player, 1); 	//check MouseStatus class in control package for comments of this method
+				dispose(); //closes previous frame
+			}
+		});	
+		MouseStatus.state(panel, menuBg, btnSong2, image0, image1, 2, player, 3); //check MouseStatus class in control package for comments of this method
 		
 		//label song 3
 		JLabel lblSong3 = new JLabel("(get song info)");
@@ -169,13 +167,14 @@ public class SongSelectUI extends JFrame{
 		
 		btnSong3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				MouseStatus.action(player, 1);
-				dispose();
+				MouseStatus.action(player, 1); //check MouseStatus class in control package for comments of this method
+				dispose(); //closes previous frame
 			}
 		});
-		MouseStatus.state(panel, menuBg, btnSong3, image0, image1, 3, player, 4);	
-		//sets background
-		setSSBg(panel, menuBg, "images/bg1.jpg");
+		MouseStatus.state(panel, menuBg, btnSong3, image0, image1, 3, player, 4); //check MouseStatus class in control package for comments of this method
+		
+	
+		setSSBg(panel, menuBg, "images/bg1.jpg"); //sets default background
 	}
 	
 	//method for setting background according to song cover/no song cover

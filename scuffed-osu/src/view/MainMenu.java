@@ -37,11 +37,6 @@ public class MainMenu extends JFrame {
 		});
 	}
 
-	/**
-	 * creates the frame (view as main menu)
-	 * plays mp3 audio file located in audio folder
-	 * 
-	 */
 	public MainMenu() {
 		
 		//setting up song and audio sound effect to play during menu
@@ -58,12 +53,6 @@ public class MainMenu extends JFrame {
 		getContentPane().add(panel);
 		panel.setLayout(null);
 
-		/*
-		 *creates start button
-		 *stops music of main menu when pressed
-		 *closes previous frame
-		 * 
-		 */
 		JButton btnStart = new JButton("");
 		java.awt.Image image = new ImageIcon("images/logo.png").getImage(); //logo at https://commons.wikimedia.org/wiki/File:Osu!Logo_(2015).png
 		BtnDefault.appear(btnStart, image);
@@ -72,11 +61,12 @@ public class MainMenu extends JFrame {
 		
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {	
-				MouseStatus.action(player, 0);
-				dispose();
+				MouseStatus.action(player, 0); 	//stops main menu music, plays click sound, opens song selection ui
+				dispose(); 	//closes previous frame
 			}
 		});
 		
+		//switches between original and alt logo depending on if mouse is on or off bounds of button
 		btnStart.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) 	{
