@@ -3,6 +3,8 @@ package model;
 import java.util.ArrayList;
 
 public class AudioList {
+	
+	//method for creating list, adding, and storing audio
 	public static String getSong(int i) {
 
 		//arraylist of audio files
