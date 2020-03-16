@@ -67,7 +67,7 @@ public class MainMenu extends JFrame {
 		JButton btnStart = new JButton("");
 		java.awt.Image image = new ImageIcon("images/logo.png").getImage(); //logo at https://commons.wikimedia.org/wiki/File:Osu!Logo_(2015).png
 		BtnDefault.appear(btnStart, image);
-		btnStart.setBounds(395, 110, 480, 480);
+		btnStart.setBounds(402, 117, 466, 466);
 		panel.add(btnStart);
 		
 		btnStart.addActionListener(new ActionListener() {
@@ -80,7 +80,7 @@ public class MainMenu extends JFrame {
 		btnStart.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) 	{
-				btnStart.setBounds(395, 110, 480, 480);
+				btnStart.setBounds(402, 117, 466, 466);
 				btnStart.setIcon(new ImageIcon("images/logo.png"));
 			}
 			public void mouseExited(MouseEvent e) {
