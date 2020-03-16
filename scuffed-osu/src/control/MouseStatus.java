@@ -4,9 +4,6 @@ import java.awt.Image;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.Timer;
-import java.util.TimerTask;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -14,7 +11,6 @@ import javax.swing.JPanel;
 
 import javazoom.jlgui.basicplayer.BasicPlayer;
 import model.BackgroundList;
-import view.Background;
 import view.BeatmapUI;
 import view.SongSelectUI;
 

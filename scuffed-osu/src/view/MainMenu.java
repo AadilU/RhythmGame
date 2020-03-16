@@ -1,5 +1,5 @@
 package view;
-import java.awt.EventQueue;
+import java.awt.EventQueue; 
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -11,7 +11,6 @@ import control.MouseStatus;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.TimerTask;
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javazoom.jlgui.basicplayer.BasicPlayer;
