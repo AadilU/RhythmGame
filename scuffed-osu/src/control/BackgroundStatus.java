@@ -2,10 +2,6 @@ package control;
 
 import java.util.ArrayList;
 
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
 public class BackgroundStatus {
 	
 	public static String setBg(int i) {
