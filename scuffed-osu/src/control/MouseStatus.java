@@ -1,7 +1,5 @@
 package control;
 
-import java.awt.Image;
-
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
@@ -25,7 +23,7 @@ public class MouseStatus {
 	public static void action(BasicPlayer player, int i) {
 
 		AudioStatus.songStop(player); //stops current audio
-		AudioStatus.songSet(player, 5); //plays click sound
+		AudioStatus.songSet(player, 4); //plays click sound
 
 		switch(i) {
 			case 0:

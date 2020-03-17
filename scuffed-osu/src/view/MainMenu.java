@@ -41,7 +41,7 @@ public class MainMenu extends JFrame {
 		
 		//setting up song and audio sound effect to play during menu
 		BasicPlayer player = new BasicPlayer();
-		AudioStatus.songSet(player, 1);
+		AudioStatus.songSet(player, 0);
 		
 		//creating frame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -7,8 +7,7 @@ public class AudioList {
 	//method for creating list, adding, storing audio, and returning audio
 	public static String getSong(int i) {
 
-		ArrayList<String> songs = new ArrayList<String>();
-		songs.add("no song"); 					
+		ArrayList<String> songs = new ArrayList<String>();				
 		songs.add("audio/osu.mp3");
 		songs.add("audio/armageddon.mp3");
 		songs.add("audio/dualfractal.mp3");

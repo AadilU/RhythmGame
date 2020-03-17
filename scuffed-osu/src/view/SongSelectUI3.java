@@ -2,6 +2,7 @@ package view;
 
 import java.awt.Color;
 
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -17,10 +18,6 @@ import model.InterfaceList;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
-import javax.swing.JPopupMenu;
-import java.awt.Component;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 public class SongSelectUI3 extends JFrame{
 	/**

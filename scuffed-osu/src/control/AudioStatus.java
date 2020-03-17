@@ -11,9 +11,9 @@ import model.AudioList;
 public class AudioStatus {
 	
 	//method for playing song according to index value 
-	public static void songSet(BasicPlayer player, int i) {
+	public static void songSet(BasicPlayer player, int j) {
 
-		String pathToFile = System.getProperty("user.dir") +"/"+ AudioList.getSong(i);
+		String pathToFile = System.getProperty("user.dir") +"/"+ AudioList.getSong(j);
 
 			try {
 			    player.open(new URL("file:///" + pathToFile));
