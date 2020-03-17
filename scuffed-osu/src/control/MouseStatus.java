@@ -46,7 +46,7 @@ public class MouseStatus {
 			
 			public void mouseExited(MouseEvent e) {
 				btnSong.setIcon(new ImageIcon(image0));
-				SongSelectUI.setSSBg(panel, menuBg, BackgroundList.getBg(4)); //check SongSelectUI class in view package for comments of this method
+				SongSelectUI.setSSBg(panel, menuBg, BackgroundList.getBg(5)); //check SongSelectUI class in view package for comments of this method
 				AudioStatus.songStop(player); //check AudioStatus class in control package for comments of this method
 			}
 		});

@@ -37,8 +37,8 @@ public class SongSelectUI extends JFrame{
 		
 		BasicPlayer player = new BasicPlayer(); //creating music/sound player object
 		
-		java.awt.Image image0 = new ImageIcon("images/ssbtn_hoverOFF1.png").getImage(); 	//creating original and alt image object to display between mouse hovering on or off button
-		java.awt.Image image1 = new ImageIcon("images/ssbtn_hoverON1.png").getImage(); 
+		java.awt.Image image0 = new ImageIcon("images/ssbtn_hoverOFF2.png").getImage(); 	//creating original and alt image object to display between mouse hovering on or off button
+		java.awt.Image image1 = new ImageIcon("images/ssbtn_hoverON2.png").getImage(); 
 		
 		//song header on interface top panel
 		JLabel lblgetSongName = new JLabel("(get song info)");
@@ -92,14 +92,14 @@ public class SongSelectUI extends JFrame{
 		
 		//interface bottom panel
 		JLabel menuBg1 = new JLabel("");
-		java.awt.Image image_bgbot = new ImageIcon("images/ssi_bot1.png").getImage(); //osu skin: Cookiezi 29 2018-03-18
+		java.awt.Image image_bgbot = new ImageIcon("images/ssi_bot2.png").getImage(); //osu skin: Cookiezi 29 2018-03-18
 		menuBg1.setIcon(new ImageIcon(image_bgbot));
 		menuBg1.setBounds(0, 0, 1331, 772);
 		panel.add(menuBg1);
 		
 		//interface top panel
 		JLabel menuBg2 = new JLabel("");
-		java.awt.Image image_bgtop = new ImageIcon("images/ssi_top.png").getImage(); 
+		java.awt.Image image_bgtop = new ImageIcon("images/ssi_top2.png").getImage(); 
 		menuBg2.setIcon(new ImageIcon(image_bgtop));
 		menuBg2.setBounds(0, 0, 1294, 552);
 		panel.add(menuBg2);
@@ -173,7 +173,7 @@ public class SongSelectUI extends JFrame{
 		});
 		MouseStatus.state(panel, menuBg, btnSong3, image0, image1, 3, player, 4); //check MouseStatus class in control package for comments of this method
 	
-		setSSBg(panel, menuBg, "images/ssbg1.png"); //sets default background
+		setSSBg(panel, menuBg, "images/ssbg2.jpg"); //sets default background
 	}
 	
 	//method for setting background according to song cover/no song cover
