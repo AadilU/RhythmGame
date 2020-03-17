@@ -10,17 +10,25 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 import control.MouseStatus;
+import control.SelectSkin;
 import javazoom.jlgui.basicplayer.BasicPlayer;
+import model.BackgroundList;
+import model.InterfaceList;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.swing.JPopupMenu;
+import java.awt.Component;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class SongSelectUI extends JFrame{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+	int i = 1;
 	public SongSelectUI() {
 		//creating frame
 		setBounds(0, 0, 1270, 720); 
@@ -35,10 +43,9 @@ public class SongSelectUI extends JFrame{
 		
 		JLabel menuBg = new JLabel(""); //creating menu background object
 		
-		BasicPlayer player = new BasicPlayer(); //creating music/sound player object
+		BasicPlayer player = new BasicPlayer(); //creating audio player object
 		
-		java.awt.Image image0 = new ImageIcon("images/ssbtn_hoverOFF2.png").getImage(); 	//creating original and alt image object to display between mouse hovering on or off button
-		java.awt.Image image1 = new ImageIcon("images/ssbtn_hoverON2.png").getImage(); 
+		//Integer i = new Integer(0); //creating 
 		
 		//song header on interface top panel
 		JLabel lblgetSongName = new JLabel("(get song info)");
@@ -90,19 +97,47 @@ public class SongSelectUI extends JFrame{
 		lblscore5.setBounds(38, 343, 530, 46);
 		panel.add(lblscore5);
 		
-		//interface bottom panel
-		JLabel menuBg1 = new JLabel("");
-		java.awt.Image image_bgbot = new ImageIcon("images/ssi_bot2.png").getImage(); //osu skin: Cookiezi 29 2018-03-18
-		menuBg1.setIcon(new ImageIcon(image_bgbot));
-		menuBg1.setBounds(0, 0, 1331, 772);
-		panel.add(menuBg1);
+		JButton btnSkin = new JButton("skin 1");
+		btnSkin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				i = 1;
+			}
+		});
+		btnSkin.setBounds(21, 589, 141, 35);
+		panel.add(btnSkin);
+		
+		JButton btnSkin_1 = new JButton("skin 2");
+		btnSkin_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				i = 2;
+			}
+		});
+		btnSkin_1.setBounds(183, 589, 141, 35);
+		panel.add(btnSkin_1);
+		
+		JButton btnSkin_2 = new JButton("skin 3");
+		btnSkin_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				i = 3;
+			}
+		});
+		btnSkin_2.setBounds(345, 589, 141, 35);
+		panel.add(btnSkin_2);
+	
 		
 		//interface top panel
 		JLabel menuBg2 = new JLabel("");
-		java.awt.Image image_bgtop = new ImageIcon("images/ssi_top2.png").getImage(); 
+		java.awt.Image image_bgtop = new ImageIcon(InterfaceList.getSSItop(i)).getImage();
 		menuBg2.setIcon(new ImageIcon(image_bgtop));
 		menuBg2.setBounds(0, 0, 1294, 552);
 		panel.add(menuBg2);
+		
+		//interface bottom panel
+		JLabel menuBg1 = new JLabel("");
+		java.awt.Image image_bgbot = new ImageIcon(InterfaceList.getSSIbot(i)).getImage();
+		menuBg1.setIcon(new ImageIcon(image_bgbot));
+		menuBg1.setBounds(0, 0, 1331, 772);
+		panel.add(menuBg1);
 		
 		//label song 1
 		JLabel lblSong1 = new JLabel("(get song info)");
@@ -115,7 +150,7 @@ public class SongSelectUI extends JFrame{
 		
 		//button song 1
 		JButton btnSong1 = new JButton("");
-		BtnDefault.appear(btnSong1, image0);
+		BtnDefault.appear(btnSong1, InterfaceList.getHoverOff(i));
 		btnSong1.setBounds(610, 102, 670, 102);
 		panel.add(btnSong1);
 		
@@ -125,7 +160,7 @@ public class SongSelectUI extends JFrame{
 				dispose();//closes previous frame
 			}
 		});
-		MouseStatus.state(panel, menuBg, btnSong1, image0, image1, 1, player, 2); //check MouseStatus class in control package for comments of this method
+		MouseStatus.state(panel, menuBg, btnSong1, 1, player, i); //check MouseStatus class in control package for comments of this method
 		
 				//label song 2
 				JLabel lblSong2 = new JLabel("(get song info)");
@@ -138,7 +173,7 @@ public class SongSelectUI extends JFrame{
 		
 		//button song 2
 		JButton btnSong2 = new JButton("");
-		BtnDefault.appear(btnSong2, image0);
+		BtnDefault.appear(btnSong2, InterfaceList.getHoverOff(i));
 		btnSong2.setBounds(610, 204, 670, 102);
 		panel.add(btnSong2);
 		
@@ -148,7 +183,7 @@ public class SongSelectUI extends JFrame{
 			    dispose();//closes previous frame
 			}
 		});	
-		MouseStatus.state(panel, menuBg, btnSong2, image0, image1, 2, player, 3); //check MouseStatus class in control package for comments of this method
+		MouseStatus.state(panel, menuBg, btnSong2, 2, player, i); //check MouseStatus class in control package for comments of this method
 		
 		//label song 3
 		JLabel lblSong3 = new JLabel("(get song info)");
@@ -161,7 +196,7 @@ public class SongSelectUI extends JFrame{
 	
 		//button song  3
 		JButton btnSong3 = new JButton("");
-		BtnDefault.appear(btnSong3, image0);
+		BtnDefault.appear(btnSong3, InterfaceList.getHoverOff(i));
 		btnSong3.setBounds(610, 306, 670, 102);
 		panel.add(btnSong3);
 		
@@ -171,9 +206,9 @@ public class SongSelectUI extends JFrame{
 				dispose();//closes previous frame
 			}
 		});
-		MouseStatus.state(panel, menuBg, btnSong3, image0, image1, 3, player, 4); //check MouseStatus class in control package for comments of this method
-	
-		setSSBg(panel, menuBg, "images/ssbg2.jpg"); //sets default background
+		MouseStatus.state(panel, menuBg, btnSong3, 3, player, i); //check MouseStatus class in control package for comments of this method
+
+		setSSBg(panel, menuBg, BackgroundList.getBg(i)); //sets default background
 	}
 	
 	//method for setting background according to song cover/no song cover
@@ -182,6 +217,4 @@ public class SongSelectUI extends JFrame{
 		menuBg.setBounds(0, 0, 1294, 681);
 		panel.add(menuBg);
 	}
-
-	
 }

@@ -54,8 +54,7 @@ public class MainMenu extends JFrame {
 		panel.setLayout(null);
 
 		JButton btnStart = new JButton("");
-		java.awt.Image image = new ImageIcon("images/logo.png").getImage(); //logo at https://commons.wikimedia.org/wiki/File:Osu!Logo_(2015).png
-		BtnDefault.appear(btnStart, image);
+		BtnDefault.appear(btnStart, "images/logo.png");
 		btnStart.setBounds(402, 117, 466, 466);
 		panel.add(btnStart);
 		
