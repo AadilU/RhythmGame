@@ -60,7 +60,7 @@ public class MainMenu extends JFrame {
 		
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {	
-				MouseStatus.action(player, 0); 	//stops main menu music, plays click sound, opens song selection ui
+				MouseStatus.action(player, 1); 	//stops main menu music, plays click sound, opens song selection ui
 				dispose();//closes previous frame
 			}
 		});

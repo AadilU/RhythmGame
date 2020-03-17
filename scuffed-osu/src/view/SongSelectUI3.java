@@ -22,15 +22,15 @@ import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class SongSelectUI extends JFrame{
+public class SongSelectUI3 extends JFrame{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	int i = 1; //declaring and initializing skin value 
+	int i = 3; //declaring and initializing skin value 
 	
-	public SongSelectUI() {
+	public SongSelectUI3() {
 		//creating frame
 		setBounds(0, 0, 1270, 720); 
 		getContentPane().setBackground(Color.WHITE);

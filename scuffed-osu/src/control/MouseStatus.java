@@ -14,6 +14,8 @@ import model.BackgroundList;
 import model.InterfaceList;
 import view.BeatmapUI;
 import view.SongSelectUI;
+import view.SongSelectUI2;
+import view.SongSelectUI3;
 
 public class MouseStatus {
 	
@@ -23,16 +25,29 @@ public class MouseStatus {
 		AudioStatus.songStop(player);
 		AudioStatus.songSet(player, 5);
 
-		if(i == 0) {
-			SongSelectUI frame = new SongSelectUI();
-		    frame.setVisible(true);
-		}
-		
-		if(i == 1) {
-			BeatmapUI frame = new BeatmapUI();
-		    frame.setVisible(true);
+		switch(i) {
+			case 0:
+				BeatmapUI frame = new BeatmapUI();
+			    frame.setVisible(true);
+			    break;
+			
+			case 1:
+				SongSelectUI frame1 = new SongSelectUI();
+			    frame1.setVisible(true);
+			    break;
+			    
+			case 2:
+				SongSelectUI2 frame2 = new SongSelectUI2();
+			    frame2.setVisible(true);
+			    break;
+			    
+			case 3:
+				SongSelectUI3 frame3 = new SongSelectUI3();
+				frame3.setVisible(true);
+				break;
 		}
 	}
+	
 	
 	//method for: (depending on if mouse is in or out of bounds of button) switches between original and alt image, plays song according to selection, and sets background according to song
 	public static void state(JPanel panel, JLabel menuBg, JButton btnSong, int j, BasicPlayer player, int i) {	
