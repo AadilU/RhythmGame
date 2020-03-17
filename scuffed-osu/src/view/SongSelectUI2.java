@@ -96,40 +96,41 @@ public class SongSelectUI2 extends JFrame{
 		lblscore5.setBounds(38, 343, 530, 46);
 		panel.add(lblscore5);
 		
-		JButton btnSkin = new JButton("skin 1");
-		btnSkin.addActionListener(new ActionListener() {
+		//buttons for changing skins
+		JButton btnSkin1 = new JButton("skin 1");
+		btnSkin1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MouseStatus.action(player, 1);
 				dispose();
 			}
 		});
-		btnSkin.setBounds(21, 589, 141, 35);
-		panel.add(btnSkin);
+		btnSkin1.setBounds(21, 589, 141, 35);
+		panel.add(btnSkin1);
 		
-		JButton btnSkin_1 = new JButton("skin 2");
-		btnSkin_1.addActionListener(new ActionListener() {
+		JButton btnSkin2 = new JButton("skin 2");
+		btnSkin2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MouseStatus.action(player, 2);
 				dispose();
 			}
 		});
-		btnSkin_1.setBounds(183, 589, 141, 35);
-		panel.add(btnSkin_1);
+		btnSkin2.setBounds(183, 589, 141, 35);
+		panel.add(btnSkin2);
 		
-		JButton btnSkin_2 = new JButton("skin 3");
-		btnSkin_2.addActionListener(new ActionListener() {
+		JButton btnSkin3 = new JButton("skin 3");
+		btnSkin3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MouseStatus.action(player, 3);
 				dispose();
 			}
 		});
-		btnSkin_2.setBounds(345, 589, 141, 35);
-		panel.add(btnSkin_2);
+		btnSkin3.setBounds(345, 589, 141, 35);
+		panel.add(btnSkin3);
 	
 		
 		//interface top panel
 		JLabel menuBg2 = new JLabel("");
-		java.awt.Image image_bgtop = new ImageIcon(InterfaceList.getSSItop(i)).getImage();
+		java.awt.Image image_bgtop = new ImageIcon(InterfaceList.getSSItop(1)).getImage();
 		menuBg2.setIcon(new ImageIcon(image_bgtop));
 		menuBg2.setBounds(0, 0, 1294, 552);
 		panel.add(menuBg2);
@@ -163,14 +164,14 @@ public class SongSelectUI2 extends JFrame{
 		});
 		MouseStatus.state(panel, menuBg, btnSong1, 1, player, i); //check MouseStatus class in control package for comments of this method
 		
-				//label song 2
-				JLabel lblSong2 = new JLabel("(get song info)");
-				lblSong2.setVerticalAlignment(SwingConstants.TOP);
-				lblSong2.setForeground(Color.WHITE);
-				lblSong2.setFont(new Font("SansSerif", Font.PLAIN, 26));
-				lblSong2.setBackground(Color.BLACK);
-				lblSong2.setBounds(756, 200, 667, 96);
-				panel.add(lblSong2);
+		//label song 2
+		JLabel lblSong2 = new JLabel("(get song info)");
+		lblSong2.setVerticalAlignment(SwingConstants.TOP);
+		lblSong2.setForeground(Color.WHITE);
+		lblSong2.setFont(new Font("SansSerif", Font.PLAIN, 26));
+		lblSong2.setBackground(Color.BLACK);
+		lblSong2.setBounds(756, 200, 667, 96);
+		panel.add(lblSong2);
 		
 		//button song 2
 		JButton btnSong2 = new JButton("");

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class BackgroundList {
 	
-	//method for creating list, adding, and storing images 
+	//method for creating list, adding, storing song background images, and returning image 
 	public static String getSongBg(int i) {
 	
 		ArrayList<String> songBg_images = new ArrayList<String>();		
@@ -16,6 +16,7 @@ public class BackgroundList {
 		return songBg_images.get(i);
 	}
 	
+	//method for creating list, adding, storing background images, and returning image 
 	public static String getBg(int i) {
 		
 		ArrayList<String> bg_images = new ArrayList<String>();

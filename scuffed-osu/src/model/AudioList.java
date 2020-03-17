@@ -4,10 +4,9 @@ import java.util.ArrayList;
 
 public class AudioList {
 	
-	//method for creating list, adding, and storing audio
+	//method for creating list, adding, storing audio, and returning audio
 	public static String getSong(int i) {
 
-		//arraylist of audio files
 		ArrayList<String> songs = new ArrayList<String>();
 		songs.add("no song"); 					
 		songs.add("audio/osu.mp3");

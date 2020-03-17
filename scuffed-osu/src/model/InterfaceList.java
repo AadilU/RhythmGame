@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class InterfaceList {
 	
-	//method for creating list, adding, and storing images 
+	//method for creating list, adding, storing song selection background images, and returning image
 	public static String getSSBG(int i) {
 	
 		ArrayList<String> ssbg_images = new ArrayList<String>();
@@ -16,6 +16,7 @@ public class InterfaceList {
 		return ssbg_images.get(i);
 	}
 	
+	//method for creating list, adding, storing song selection button (hover off) images, and returning image
 	public static String getHoverOff(int i) {
 		
 		ArrayList<String> hoverOFF_images = new ArrayList<String>();
@@ -27,6 +28,7 @@ public class InterfaceList {
 		return hoverOFF_images.get(i);
 	}
 	
+	//method for creating list, adding, storing song selection button (hover on) images, and returning image
 	public static String getHoverOn(int i) {
 		
 		ArrayList<String> hoverON_images = new ArrayList<String>();
@@ -38,6 +40,7 @@ public class InterfaceList {
 		return hoverON_images.get(i);
 	}
 	
+	//method for creating list, adding, storing song selection interface bottom panel images, and returning image
 	public static String getSSIbot(int i) {
 		
 		ArrayList<String> SSIbot_images = new ArrayList<String>();
@@ -49,6 +52,7 @@ public class InterfaceList {
 		return SSIbot_images.get(i);
 	}
 	
+	//method for creating list, adding, storing song selection interface top panel images, and returning image
 	public static String getSSItop(int i) {
 		
 		ArrayList<String> SSItop_images = new ArrayList<String>();
