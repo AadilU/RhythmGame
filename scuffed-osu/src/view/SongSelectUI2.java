@@ -144,19 +144,19 @@ public class SongSelectUI2 extends JFrame{
 		btnSkin3.setBounds(253, 589, 103, 35);
 		panel.add(btnSkin3);
 		
-		//interface top panel
-		JLabel menuBg2 = new JLabel("");
-		java.awt.Image image_bgtop = new ImageIcon(InterfaceList.getSSItop(i)).getImage();
-		menuBg2.setIcon(new ImageIcon(image_bgtop));
-		menuBg2.setBounds(0, 0, 1294, 552);
-		panel.add(menuBg2);
-		
 		//interface bottom panel
 		JLabel menuBg1 = new JLabel("");
 		java.awt.Image image_bgbot = new ImageIcon(InterfaceList.getSSIbot(i)).getImage();
 		menuBg1.setIcon(new ImageIcon(image_bgbot));
 		menuBg1.setBounds(0, 0, 1331, 772);
 		panel.add(menuBg1);
+		
+		//interface top panel
+		JLabel menuBg2 = new JLabel("");
+		java.awt.Image image_bgtop = new ImageIcon(InterfaceList.getSSItop(1)).getImage();
+		menuBg2.setIcon(new ImageIcon(image_bgtop));
+		menuBg2.setBounds(0, 0, 1294, 552);
+		panel.add(menuBg2);
 		
 		//label song 1
 		JLabel lblSong1 = new JLabel("(get song info)");
