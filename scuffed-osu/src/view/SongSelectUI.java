@@ -92,37 +92,57 @@ public class SongSelectUI extends JFrame{
 		lblscore5.setBounds(38, 343, 530, 46);
 		panel.add(lblscore5);
 		
-		//buttons for changing skin
-		JButton btnSkin1 = new JButton("skin 1");
+		//buttons and labels for changing skin
+		JLabel lblSkin1 = new JLabel("skin 1");
+		lblSkin1.setFont(new Font("SansSerif", Font.PLAIN, 21));
+		lblSkin1.setForeground(Color.WHITE);
+		lblSkin1.setBounds(45, 589, 103, 35);
+		panel.add(lblSkin1);
+		
+		JButton btnSkin1 = new JButton("");
+		BtnDefault.appear(btnSkin1, InterfaceList.getCS(i));
 		btnSkin1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MouseStatus.action(player, 1);
 				dispose();
 			}
 		});
-		btnSkin1.setBounds(21, 589, 141, 35);
+		btnSkin1.setBounds(21, 589, 103, 35);
 		panel.add(btnSkin1);
 		
-		JButton btnSkin2 = new JButton("skin 2");
+		JLabel lblskin2 = new JLabel("skin 2");
+		lblskin2.setForeground(Color.WHITE);
+		lblskin2.setFont(new Font("SansSerif", Font.PLAIN, 21));
+		lblskin2.setBounds(162, 589, 103, 35);
+		panel.add(lblskin2);
+		
+		JButton btnSkin2 = new JButton("");
+		BtnDefault.appear(btnSkin2, InterfaceList.getCS(i));
 		btnSkin2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MouseStatus.action(player, 2);
 				dispose();
 			}
 		});
-		btnSkin2.setBounds(183, 589, 141, 35);
+		btnSkin2.setBounds(137, 589, 103, 35);
 		panel.add(btnSkin2);
+	
+		JLabel lblskin3 = new JLabel("skin 3");
+		lblskin3.setForeground(Color.WHITE);
+		lblskin3.setFont(new Font("SansSerif", Font.PLAIN, 21));
+		lblskin3.setBounds(278, 589, 103, 35);
+		panel.add(lblskin3);
 		
-		JButton btnSkin3 = new JButton("skin 3");
+		JButton btnSkin3 = new JButton("");
+		BtnDefault.appear(btnSkin3, InterfaceList.getCS(i));
 		btnSkin3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MouseStatus.action(player, 3);
 				dispose();
 			}
 		});
-		btnSkin3.setBounds(345, 589, 141, 35);
+		btnSkin3.setBounds(253, 589, 103, 35);
 		panel.add(btnSkin3);
-	
 		
 		//interface top panel
 		JLabel menuBg2 = new JLabel("");
@@ -160,7 +180,7 @@ public class SongSelectUI extends JFrame{
 		});
 		MouseStatus.state(panel, menuBg, btnSong1, 1, player, i); //check MouseStatus class in control package for comments of this method
 		
-				//label song 2
+		//label song 2
 		JLabel lblSong2 = new JLabel("(get song info)");
 		lblSong2.setVerticalAlignment(SwingConstants.TOP);
 		lblSong2.setForeground(Color.WHITE);

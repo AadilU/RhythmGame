@@ -63,4 +63,16 @@ public class InterfaceList {
 		
 		return SSItop_images.get(i);
 	}
+	
+	//method for creating list, adding, storing song selection interface top panel images, and returning image
+	public static String getCS(int i) {
+		
+		ArrayList<String> CS_images = new ArrayList<String>();
+		CS_images.add("no skin");
+		CS_images.add("images/ssbtn_cs.png"); 
+		CS_images.add("images/ssbtn_cs1.png"); 
+		CS_images.add("images/ssbtn_cs2.png"); 
+		
+		return CS_images.get(i);
+	}
 }
