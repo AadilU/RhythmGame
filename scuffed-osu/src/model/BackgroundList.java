@@ -9,9 +9,9 @@ public class BackgroundList {
 	
 		ArrayList<String> songBg_images = new ArrayList<String>();		
 		songBg_images.add("no bg");
-		songBg_images.add("images/song1Bg.png");
-		songBg_images.add("images/song2Bg.png");
-		songBg_images.add("images/song3Bg.png");
+		songBg_images.add("images/song1Bg2.jpg");
+		songBg_images.add("images/song2Bg2.jpg");
+		songBg_images.add("images/song3Bg2.jpg");
 	
 		return songBg_images.get(i);
 	}
