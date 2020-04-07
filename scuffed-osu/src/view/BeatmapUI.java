@@ -27,7 +27,7 @@ public class BeatmapUI extends JFrame{
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("beatmap ui WIP lol :3 - cory");
+		JLabel lblNewLabel = new JLabel("beatmap ui WIP lol :3 - cory   NEO WAS HERE");
 		lblNewLabel.setBounds(85, 68, 317, 104);
 		panel.add(lblNewLabel);
 		
