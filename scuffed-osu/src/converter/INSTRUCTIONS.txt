@@ -1,0 +1,29 @@
+DISCLAIMER: this converter is only for people who have osu and know how to use the
+editor. If you don't have osu there's no point in using this lol.
+
+Hello there wiz team, I made a converter so for the types of files that we'll be using.
+If you look in converted files/example.wiz you'll see it has 3 different numbers on each line.
+
+1. the x position of the note
+2. the y position of the note (always 192 since its mania)
+3. the time the note is hit in milliseconds
+
+I made this file to show you how to use this converter so if you have any mania maps
+you can use this converter but you are going to do a few things first.
+
+First go into the osu editor for your map and make sure that every note is a normal 
+note and not a long note. Then after that press ctrl + a and make sure no object has
+any sort of sample sound. Make every note have an auto sound and each one has no
+additional sounds. Now you can move the file into the scuffed-osu folder
+
+Open the file once it's in the folder and in the file you will find a long list of numbers 
+where each line looks something like 448,192,2392,1,0,0:0:0:0: above those lines 
+you will see something titled [HitObjects] make sure to delete everything above it 
+including the [HitObjects] line.
+
+Now you can run the converter and it will prompt for the file you want. make sure to 
+copy and paste it and if you did it correctly, there should be a new folder that has the
+same format as the example.wiz. and that's how you use the converter. Sorry it's so long
+lol. 
+
+If you have any questions my discord is TeoTheBiccBoi#1118 or you can contact me through slacks
