@@ -33,19 +33,19 @@ public class BeatmapUI extends JFrame{
 		panel.add(lblNewLabel);
 		
 		JButton button_1 = new JButton("New button");
-		button_1.setBounds(838, 586, 105, 35);
+		button_1.setBounds(809, 585, 105, 35);
 		panel.add(button_1);
 		
 		JButton button = new JButton("New button");
-		button.setBounds(733, 586, 105, 35);
+		button.setBounds(704, 585, 105, 35);
 		panel.add(button);
 		
 		JButton button_2 = new JButton("New button");
-		button_2.setBounds(627, 586, 105, 35);
+		button_2.setBounds(598, 585, 105, 35);
 		panel.add(button_2);
 		
 		JButton button_3 = new JButton("New button");
-		button_3.setBounds(521, 586, 105, 35);
+		button_3.setBounds(492, 585, 105, 35);
 		panel.add(button_3);
 		
 	}
