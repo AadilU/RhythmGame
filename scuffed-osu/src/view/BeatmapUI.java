@@ -48,5 +48,6 @@ public class BeatmapUI extends JFrame{
 		button_3.setBounds(492, 585, 105, 35);
 		panel.add(button_3);
 		
+		
 	}
 }
