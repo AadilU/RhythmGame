@@ -159,7 +159,7 @@ public class SongSelectUIDyn extends JFrame{
 				image_bgtop = new ImageIcon(InterfaceList.getSSItop(i)).getImage();
 				image_bgbot = new ImageIcon(InterfaceList.getSSIbot(i)).getImage();
 		}
-		
+				
 		//interface top panel
 		JLabel menuBg2 = new JLabel("");
 		menuBg2.setIcon(new ImageIcon(image_bgtop));

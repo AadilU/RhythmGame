@@ -1,6 +1,7 @@
 package control;
 
 import java.awt.event.MouseAdapter;
+
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -13,9 +14,6 @@ import model.InterfaceList;
 import view.BeatmapUI;
 import view.BeatmapUI2;
 import view.BeatmapUI3;
-import view.SongSelectUI;
-import view.SongSelectUI2;
-import view.SongSelectUI3;
 import view.SongSelectUIDyn;
 
 public class MouseStatus {
@@ -103,13 +101,13 @@ public class MouseStatus {
 			@Override
 			public void mouseEntered(MouseEvent e) 	{
 				btnSong.setIcon(new ImageIcon(image1));
-				SongSelectUI.setSSBg(panel, menuBg, BackgroundList.getSongBg(j)); //check SongSelectUI class in view package for comments of this method
+				SongSelectUIDyn.setSSBg(panel, menuBg, BackgroundList.getSongBg(j)); //check SongSelectUI class in view package for comments of this method
 				AudioStatus.songSet(player, j); //check AudioStatus class in control package for comments of this method
 			}
 			
 			public void mouseExited(MouseEvent e) {
 				btnSong.setIcon(new ImageIcon(image0));
-				SongSelectUI.setSSBg(panel, menuBg, BackgroundList.getBg(i)); //check SongSelectUI class in view package for comments of this method
+				SongSelectUIDyn.setSSBg(panel, menuBg, BackgroundList.getBg(i)); //check SongSelectUI class in view package for comments of this method
 				AudioStatus.songStop(player); //check AudioStatus class in control package for comments of this method
 			}
 		});
