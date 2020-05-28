@@ -54,7 +54,7 @@ public class MainMenu extends JFrame {
 		panel.setLayout(null);
 
 		JButton btnStart = new JButton("");
-		BtnDefault.appear(btnStart, "images/logo1.png");
+		BtnDefault.appear(btnStart, "images/logo1.png"); 
 		btnStart.setBounds(420, 135, 430, 430);
 		panel.add(btnStart);
 		
