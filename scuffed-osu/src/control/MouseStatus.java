@@ -16,6 +16,7 @@ import view.BeatmapUI3;
 import view.SongSelectUI;
 import view.SongSelectUI2;
 import view.SongSelectUI3;
+import view.SongSelectUIDyn;
 
 public class MouseStatus {
 	
@@ -24,7 +25,7 @@ public class MouseStatus {
 
 		AudioStatus.songStop(player); //stops current audio
 		AudioStatus.songSet(player, 4); //plays click sound
-
+/*
 		switch(i) {
 			case 0:
 				BeatmapUI frame = new BeatmapUI(); //beatmap for song 1
@@ -55,7 +56,39 @@ public class MouseStatus {
 				BeatmapUI3 frame5 = new BeatmapUI3(); //beatmap for song 3
 				frame5.setVisible(true);
 			    break;
-		}
+		} */
+		switch(i) 
+		{
+			case 0:
+				BeatmapUI frame = new BeatmapUI(); //beatmap for song 1
+			    frame.setVisible(true);
+			    break;
+			
+			case 1:
+				SongSelectUIDyn frame1 = new SongSelectUIDyn(1); //song selection interface and background skin 1
+			    frame1.setVisible(true);
+			    break;
+			    
+			case 2:
+				SongSelectUIDyn frame2 = new SongSelectUIDyn(2); //song selection interface and background skin 2
+			    frame2.setVisible(true);
+			    break;
+			    
+			case 3:
+				SongSelectUIDyn frame3 = new SongSelectUIDyn(3); //song selection interface and background skin 3
+				frame3.setVisible(true);
+				break;
+				
+			case 4:
+				BeatmapUI2 frame4 = new BeatmapUI2(); //beatmap for song 2
+				frame4.setVisible(true);
+			    break;
+			    
+			case 5:
+				BeatmapUI3 frame5 = new BeatmapUI3(); //beatmap for song 3
+				frame5.setVisible(true);
+			    break;
+		} 
 	}
 	
 	
