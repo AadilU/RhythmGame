@@ -38,18 +38,15 @@ public class SongSelectUIDyn extends JFrame{
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		
+		JLabel lblSongName = new JLabel(""); //song header on interface top panel
 		JLabel menuBg = new JLabel(""); //creating menu background object
+		lblSongName.setForeground(Color.WHITE);
+		lblSongName.setFont(new Font("SansSerif", Font.PLAIN, 32));
+		lblSongName.setBackground(Color.BLACK);
+		lblSongName.setBounds(38, 4, 600, 50);
+		panel.add(lblSongName);
 		
 		BasicPlayer player = new BasicPlayer(); //creating audio player object
-		
-		//song header on interface top panel
-		JLabel lblgetSongName = new JLabel("(get song info)");
-		lblgetSongName.setForeground(Color.WHITE);
-		lblgetSongName.setFont(new Font("SansSerif", Font.PLAIN, 32));
-		lblgetSongName.setBackground(Color.BLACK);
-		lblgetSongName.setBounds(38, 21, 481, 50);
-		panel.add(lblgetSongName);
 
 		//scoreboard
 		JLabel lblLocalScores = new JLabel("LOCAL SCORES");
@@ -173,17 +170,17 @@ public class SongSelectUIDyn extends JFrame{
 		panel.add(menuBg1);
 		
 		//label song 1
-		JLabel lblSong1 = new JLabel("(get song info)");
+		JLabel lblSong1 = new JLabel("Adrenaline - Eromanga Sensei ED");
 		lblSong1.setVerticalAlignment(SwingConstants.TOP);
 		lblSong1.setForeground(Color.WHITE);
 		lblSong1.setFont(new Font("SansSerif", Font.PLAIN, 26));
 		lblSong1.setBackground(Color.BLACK);
-		lblSong1.setBounds(756, 100, 667, 101);
+		lblSong1.setBounds(756, 104, 667, 101);
 		panel.add(lblSong1);
 		
 		//button song 1
 		JButton btnSong1 = new JButton("");
-		BtnDefault.appear(btnSong1, InterfaceList.getHoverOff(i));
+		BtnDefault.appear(btnSong1, InterfaceList.getHoverOff(i)); //method for setting default button properties
 		btnSong1.setBounds(610, 102, 670, 102);
 		panel.add(btnSong1);
 		
@@ -192,20 +189,20 @@ public class SongSelectUIDyn extends JFrame{
 				MouseStatus.action(player, 0); //check MouseStatus class in control package for comments of this method
 			}
 		});
-		MouseStatus.state(panel, menuBg, btnSong1, 1, player, i); //check MouseStatus class in control package for comments of this method
+		MouseStatus.state(panel, menuBg, lblSongName, btnSong1, 1, player, i); //check MouseStatus class in control package for comments of this method
 		
 		//label song 2
-		JLabel lblSong2 = new JLabel("(get song info)");
+		JLabel lblSong2 = new JLabel("True Blue - dj TAKA");
 		lblSong2.setVerticalAlignment(SwingConstants.TOP);
 		lblSong2.setForeground(Color.WHITE);
 		lblSong2.setFont(new Font("SansSerif", Font.PLAIN, 26));
 		lblSong2.setBackground(Color.BLACK);
-		lblSong2.setBounds(756, 200, 667, 96);
+		lblSong2.setBounds(756, 206, 667, 96);
 		panel.add(lblSong2);
 		
 		//button song 2
 		JButton btnSong2 = new JButton("");
-		BtnDefault.appear(btnSong2, InterfaceList.getHoverOff(i));
+		BtnDefault.appear(btnSong2, InterfaceList.getHoverOff(i)); //method for setting default button properties
 		btnSong2.setBounds(610, 204, 670, 102);
 		panel.add(btnSong2);
 		
@@ -214,20 +211,20 @@ public class SongSelectUIDyn extends JFrame{
 				MouseStatus.action(player, 0); 	//check MouseStatus class in control package for comments of this method
 			}
 		});	
-		MouseStatus.state(panel, menuBg, btnSong2, 2, player, i); //check MouseStatus class in control package for comments of this method
+		MouseStatus.state(panel, menuBg, lblSongName, btnSong2, 2, player, i); //check MouseStatus class in control package for comments of this method
 		
 		//label song 3
-		JLabel lblSong3 = new JLabel("(get song info)");
+		JLabel lblSong3 = new JLabel("Dream - Radpit");
 		lblSong3.setVerticalAlignment(SwingConstants.TOP);
 		lblSong3.setForeground(Color.WHITE);
 		lblSong3.setFont(new Font("SansSerif", Font.PLAIN, 26));
 		lblSong3.setBackground(Color.BLACK);
-		lblSong3.setBounds(756, 302, 667, 96);
+		lblSong3.setBounds(756, 308, 670, 102);
 		panel.add(lblSong3);
-	
+
 		//button song  3
 		JButton btnSong3 = new JButton("");
-		BtnDefault.appear(btnSong3, InterfaceList.getHoverOff(i));
+		BtnDefault.appear(btnSong3, InterfaceList.getHoverOff(i)); //method for setting default button properties
 		btnSong3.setBounds(610, 306, 670, 102);
 		panel.add(btnSong3);
 		
@@ -236,15 +233,18 @@ public class SongSelectUIDyn extends JFrame{
 				MouseStatus.action(player, 0); //check MouseStatus class in control package for comments of this method
 			}
 		});
-		MouseStatus.state(panel, menuBg, btnSong3, 3, player, i); //check MouseStatus class in control package for comments of this method
-
-		setSSBg(panel, menuBg, BackgroundList.getBg(i)); //sets default background
+		MouseStatus.state(panel, menuBg, lblSongName, btnSong3, 3, player, i); //check MouseStatus class in control package for comments of this method
+		
+		setSSBg(panel, menuBg, BackgroundList.getBg(i)); //sets default background and no song title
 	}
 	
-	//method for setting background according to song cover/no song cover
+	//method for displaying background according to song cover/no song cover
 	public static void setSSBg(JPanel panel, JLabel menuBg, String image_bg) {
+	
 		menuBg.setIcon(new ImageIcon(image_bg));
 		menuBg.setBounds(0, 0, 1294, 681);
 		panel.add(menuBg);
+		
+		
 	}
 }

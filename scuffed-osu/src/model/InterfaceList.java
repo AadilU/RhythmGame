@@ -64,7 +64,7 @@ public class InterfaceList {
 		return SSItop_images.get(i);
 	}
 	
-	//method for creating list, adding, storing song selection interface top panel images, and returning image
+	//method for creating list, adding, storing skin selection interface images, and returning image
 	public static String getCS(int i) {
 		
 		ArrayList<String> CS_images = new ArrayList<String>();
@@ -75,4 +75,18 @@ public class InterfaceList {
 		
 		return CS_images.get(i);
 	}
+	
+	//method for creating list, adding, storing song titles
+	public static String getSongTitle(int i) {
+		
+		ArrayList<String> songTitle = new ArrayList<String>();
+		songTitle.add(""); //blank (no title)
+		songTitle.add("Adrenaline - Eromanga Sensei ED"); 
+		songTitle.add("True Blue - dj TAKA"); 
+		songTitle.add("Dream - Radpit"); 
+		
+		return songTitle.get(i);
+	}
+	
+	
 }
