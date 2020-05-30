@@ -170,7 +170,7 @@ public class SongSelectUIDyn extends JFrame{
 		panel.add(menuBg1);
 		
 		//label song 1
-		JLabel lblSong1 = new JLabel("Adrenaline - Eromanga Sensei ED");
+		JLabel lblSong1 = new JLabel("adrenaline!!! - TrySail");
 		lblSong1.setVerticalAlignment(SwingConstants.TOP);
 		lblSong1.setForeground(Color.WHITE);
 		lblSong1.setFont(new Font("SansSerif", Font.PLAIN, 26));
