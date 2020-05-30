@@ -81,7 +81,7 @@ public class InterfaceList {
 		
 		ArrayList<String> songTitle = new ArrayList<String>();
 		songTitle.add(""); //blank (no title)
-		songTitle.add("Adrenaline - Eromanga Sensei ED"); 
+		songTitle.add("adrenaline!!! - TrySail"); 
 		songTitle.add("True Blue - dj TAKA"); 
 		songTitle.add("Dream - Radpit"); 
 		

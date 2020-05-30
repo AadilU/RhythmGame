@@ -56,7 +56,7 @@ public class InitialPopUpWindow extends JFrame {
 		panel.setLayout(null);
 
 		JButton btnStart = new JButton("laggy version");
-		btnStart.setBounds(248, 550, 233, 62);
+		btnStart.setBounds(243, 565, 233, 62);
 		panel.add(btnStart);
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {	
@@ -66,20 +66,20 @@ public class InitialPopUpWindow extends JFrame {
 			}
 		});
 		
-		JButton button = new JButton("not laggy version");
-		button.addActionListener(new ActionListener() {
+		JButton btnNotLaggyVersion = new JButton("not laggy version");
+		btnNotLaggyVersion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				AudioStatus.songStop(player);
 				MainMenuNotLaggyVersionButHasNoAudio.main(null);
 				dispose();
 			}
 		});
-		button.setBounds(531, 550, 233, 62);
-		panel.add(button);
+		btnNotLaggyVersion.setBounds(529, 565, 233, 62);
+		panel.add(btnNotLaggyVersion);
 		
 		JTextPane txtpnBeforeAspectsOf = new JTextPane();
-		txtpnBeforeAspectsOf.setText("testing note:\r\n\r\nbefore aspects of visual code can execute, the audio needs to stop first.\r\nhowever, the piece of code that plays and stops music is slow af (using basic player 3.0).\r\nthis results in a \"lagging\" effect, bc visual effects and starting/stoping music can't happen simultaneously as java executes code top to bottom, line by line. \r\n\r\nto reduce the lag, you can run a version without sound effects and music in the starting screen and song selection screen.\r\nmusic can resume once the beatmap is started, but beatmaps are still WIP\r\n\r\nor you can run a version with sound effects and music in the starting screen and song selection screen.\r\n\r\n*if u are gonna edit code for the main project, do so in a class that is not \"...NotLaggyVersionButHasNoAudio\" bc those r only temporary rn\r\n\r\n- cory :3");
-		txtpnBeforeAspectsOf.setBounds(0, 21, 975, 485);
+		txtpnBeforeAspectsOf.setText("testing note:\r\n\r\nbefore aspects of the code for visual effects that occur alongside code for changes in music can execute, the code that plays audio needs time to close a stream before opening a new one\r\nthe piece of code that plays and stops music is slow af (using basic player 3.0).\r\nthis results in a \"lagging\" effect, bc visual effects and starting/stoping music can't happen simultaneously as the code executes top to bottom, line by line. \r\n\r\nto reduce the lag, you can run a version without sound effects and music in the starting screen and song selection screen.\r\nmusic can resume once the beatmap is started as there wont be any sudden opening/closing of streams, but beatmaps are still WIP\r\n\r\nor you can run a version thats laggy but has sound effects and music in the starting screen and song selection screen.\r\n\r\n*if u are gonna edit code for the main project, do so in a class that is not \"...NotLaggyVersionButHasNoAudio\" bc those r only temporary rn\r\n\r\n- cory :3");
+		txtpnBeforeAspectsOf.setBounds(0, 21, 975, 531);
 		panel.add(txtpnBeforeAspectsOf);
 		
 		
